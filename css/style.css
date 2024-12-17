@@ -1326,4 +1326,76 @@ p.sub-test {
     }
 }
 
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a {
+    color: #fff;
+    background-color: #007bff; /* Default blue background */
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.social-icons a i {
+    vertical-align: middle;
+}
+
+.social-icons a.email-link {
+    background-color: #17a2b8; /* Teal color for email */
+}
+
+.social-icons a.linkedin-link {
+    background-color: #0077b5; /* LinkedIn blue */
+}
+
+.social-icons a.youtube-link {
+    background-color: #ff0000; /* YouTube red */
+}
+
+.social-icons a.scholar-link {
+    background-color: #4caf50; /* Google Scholar green */
+}
+
+.social-icons a.twitter-link {
+    background-color: #1da1f2; /* Twitter blue */
+}
+
+.social-icons a.github-link {
+    background-color: #333; /* GitHub black */
+}
+
+
+
+
+
 /* //responsive */
