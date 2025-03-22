@@ -1398,47 +1398,4 @@ p.sub-test {
 
 
 
-
-/* Light Theme (Default) */
-.light-theme {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.light-theme .card {
-    background-color: #f8f9fa;
-    color: #000000;
-}
-
-/* Dark Theme */
-.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-.dark-theme .card {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-.dark-theme .navbar-dark {
-    background-color: #1e1e1e !important;
-}
-
-.dark-theme .footer {
-    background-color: #1e1e1e !important;
-}
-
-.dark-theme .btn-outline-secondary {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-.dark-theme .btn-outline-secondary:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-
-
 /* //responsive */
