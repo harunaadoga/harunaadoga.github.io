@@ -1348,26 +1348,28 @@ p.sub-test {
 }
 
 .social-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #fff;
+    background-color: #6c757d; /* Uniform grey */
+    font-size: 20px;
     width: 50px;
     height: 50px;
-    background-color: #6c757d; /* Uniform grey */
-    color: #fff;
-    font-size: 20px;
-    border-radius: 12px; /* Rounded square */
+    line-height: 50px;
     text-align: center;
-    text-decoration: none;
+    border-radius: 12px; /* Rounded square look */
+    display: inline-block;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
-    background-color: #5a6268; /* Slightly darker grey on hover */
+    background-color: #5a6268;
     transform: translateY(-5px);
 }
 
-/* Optional: Remove platform-specific colors if already set elsewhere */
+.social-icons a i {
+    vertical-align: middle;
+}
+
+/* Override custom platform backgrounds */
 .social-icons a.email-link,
 .social-icons a.linkedin-link,
 .social-icons a.youtube-link,
@@ -1376,6 +1378,10 @@ p.sub-test {
 .social-icons a.github-link {
     background-color: #6c757d;
 }
+
+
+
+
 
 
 
