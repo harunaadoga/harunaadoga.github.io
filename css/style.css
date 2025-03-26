@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
 /* Reset Code */
 body {
     padding: 0;
@@ -153,16 +154,6 @@ a.logo {
     margin: 0 auto;
 }
 
-.social-icons ul li {
-    display: inline-block;
-}
-
-.social-icons ul li a span {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 18px;
-}
-
 .button-style {
     padding: 14px 30px;
     color: #fff;
@@ -290,65 +281,6 @@ p.foot-para {
     color: #dadada;
 }
 
-/* social icons */
-.w3pvt-webits_social_list li {
-    display: inline-block;
-}
-
-.w3pvt-webits_social_list li {
-    width: 36px;
-    height: 36px;
-    text-align: center;
-    display: inline-block;
-    font-size: 14px;
-}
-
-.w3pvt-webits_social_list li a span {
-    color: #fff;
-    line-height: 36px;
-}
-
-.w3_w3pvt-web_facebook {
-    background: #3b5998;
-    border-color: #3b5998;
-}
-
-.w3pvt-web_twitter {
-    background: #1da1f2;
-    border-color: #1da1f2;
-}
-
-.w3_w3pvt-web_dribble {
-    background: #ea4c89;
-    border-color: #ea4c89;
-}
-
-.w3_w3pvt-web_google {
-    background: #F44336;
-    border-color: #F44336;
-}
-
-/* //social-icons */
-
-/* copyright */
-.welcome-bottom,
-.cpy-right {
-    max-width: 900px;
-}
-
-.cpy-right p {
-    letter-spacing: 2px;
-    border-color: rgba(255, 255, 255, 0.42) !important;
-    padding-top: 2em;
-    color: #e0e0e0;
-    font-size: 14.5px;
-}
-
-.cpy-right p a {
-    color: #eee;
-}
-
-/* //copyright */
 /* //footer */
 
 /* contact */
@@ -869,6 +801,133 @@ p.sub-test {
 
 /* //testmonials */
 
+/* ======================
+   Social Media Buttons
+   ====================== */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    font-size: 20px;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+}
+
+/* LinkedIn */
+.btn-linkedin {
+    background-color: #0077b5;
+    border: 1px solid #0077b5;
+}
+
+.btn-linkedin:hover {
+    background-color: #006097;
+    border-color: #006097;
+    color: white;
+}
+
+/* YouTube */
+.btn-youtube {
+    background-color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.btn-youtube:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    color: white;
+}
+
+/* Google Scholar */
+.btn-scholar {
+    background-color: #4285f4;
+    border: 1px solid #4285f4;
+}
+
+.btn-scholar:hover {
+    background-color: #3367d6;
+    border-color: #3367d6;
+    color: white;
+}
+
+/* GitHub */
+.btn-github {
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+.btn-github:hover {
+    background-color: #24292e;
+    border-color: #24292e;
+    color: white;
+}
+
+/* Theme-specific adjustments */
+.dark-theme .social-icons a {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .social-icons a:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Light Theme (Default) */
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .card {
+    background-color: #f8f9fa;
+    color: #000000;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-theme .navbar-dark {
+    background-color: #1e1e1e !important;
+}
+
+.dark-theme .footer {
+    background-color: #1e1e1e !important;
+}
+
+.dark-theme .btn-outline-secondary {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.dark-theme .btn-outline-secondary:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 /* responsive */
 @media(max-width: 1680px) {}
 
@@ -1126,10 +1185,6 @@ p.sub-test {
         font-size: 14px;
     }
 
-    .social-icons ul li a span {
-        font-size: 16px;
-    }
-
     .button-style {
         padding: 13px 20px;
         font-size: 12px;
@@ -1252,10 +1307,6 @@ p.sub-test {
         font-size: 12px;
     }
 
-    .social-icons ul li a span {
-        font-size: 14px;
-    }
-
     .button-style {
         padding: 12px 20px;
         font-size: 11px;
@@ -1325,103 +1376,3 @@ p.sub-test {
         width: 70%;
     }
 }
-
-
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.social-icons ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.social-icons li {
-    display: inline-block;
-}
-
-.social-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: #6c757d; /* Uniform grey */
-    color: #fff;
-    font-size: 20px;
-    border-radius: 12px; /* Rounded square */
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    background-color: #5a6268; /* Slightly darker grey on hover */
-    transform: translateY(-5px);
-}
-
-/* Optional: Remove platform-specific colors if already set elsewhere */
-.social-icons a.email-link,
-.social-icons a.linkedin-link,
-.social-icons a.youtube-link,
-.social-icons a.scholar-link,
-.social-icons a.twitter-link,
-.social-icons a.github-link {
-    background-color: #6c757d;
-}
-
-
-
-
-
-
-/* Light Theme (Default) */
-.light-theme {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.light-theme .card {
-    background-color: #f8f9fa;
-    color: #000000;
-}
-
-/* Dark Theme */
-.dark-theme {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-.dark-theme .card {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-.dark-theme .navbar-dark {
-    background-color: #1e1e1e !important;
-}
-
-.dark-theme .footer {
-    background-color: #1e1e1e !important;
-}
-
-.dark-theme .btn-outline-secondary {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-.dark-theme .btn-outline-secondary:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-
-
-/* //responsive */
