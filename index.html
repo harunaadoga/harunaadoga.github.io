@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haruna Adoga - HPC Systems Engineer | IT Consultant | Researcher</title>
-    <meta name="description" content="Haruna Adoga - HPC Systems Engineer, IT Consultant, and Researcher specializing in Network Programmability, Edge Computing, and Cloud Computing.">
-    <meta name="keywords" content="Haruna Adoga, HPC Systems Engineer, IT Consultant, Researcher, Network Programmability, Edge Computing, Cloud Computing">
+    <title>Dr. Haruna Adoga | HPC Systems Architect | Cloud Infrastructure Specialist</title>
+    <meta name="description" content="Dr. Haruna Adoga - HPC Systems Architect and Cloud Infrastructure Specialist">
+    <meta name="keywords" content="Haruna Adoga, HPC Engineer, Cloud Architect, Network Programmability">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     
     <!-- Bootstrap CSS -->
@@ -15,33 +15,201 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-dark: #121212;
+            --secondary-dark: #1E1E1E;
+            --accent-orange: #FF6B35;
+            --text-primary: #F5F5F5;
+            --text-secondary: #CCCCCC;
+            --card-bg: #252525;
+            --card-border: #333333;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        a {
+            color: var(--accent-orange);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #FF8C5A;
+        }
+        
+        .navbar {
+            background-color: var(--primary-dark) !important;
+            border-bottom: 1px solid var(--card-border);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--text-primary) !important;
+        }
+        
+        .nav-link {
+            color: var(--text-secondary) !important;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-orange) !important;
+        }
+        
+        .hero-section {
+            background: var(--primary-dark);
+            padding: 6rem 0 4rem;
+        }
+        
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 4px solid var(--accent-orange);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent-orange);
+            color: var(--primary-dark);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent-orange);
+            border-color: var(--accent-orange);
+            color: #121212;
+            font-weight: 600;
+            padding: 0.6rem 1.5rem;
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+            font-weight: 600;
+            padding: 0.6rem 1.5rem;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--accent-orange);
+            color: var(--primary-dark);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-orange);
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-header {
+            background-color: rgba(255, 107, 53, 0.1);
+            border-bottom: 1px solid var(--card-border);
+            padding: 1rem 1.5rem;
+        }
+        
+        .skill-badge {
+            background-color: rgba(255, 107, 53, 0.1);
+            color: var(--accent-orange);
+            padding: 0.4rem 0.8rem;
+            margin: 0.2rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+        }
+        
+        .publication-item {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+        
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+        
+        .text-accent {
+            color: var(--accent-orange);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 5rem 0 3rem;
+            }
+            
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
-<body class="light-theme">
-    <!-- Theme Toggle Button -->
-    <button id="theme-toggle" class="btn btn-secondary theme-toggle">
-        <i class="fas fa-moon"></i> <!-- Default to light theme -->
-    </button>
-
+<body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">Haruna Adoga</a>
+            <a class="navbar-brand" href="#home">Dr. Haruna Adoga</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">Blog/Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Research</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -49,270 +217,263 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section bg-light text-center py-5">
+    <section id="home" class="hero-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <h1 class="display-4">Haruna Adoga</h1>
-                    <p class="lead"><strong>HPC Systems Engineer | IT Consultant | Researcher</strong></p>
-                    <img src="images/haruna.jpg" alt="Haruna Adoga" class="img-fluid rounded-circle my-4" width="200" height="200">
+                <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                    <h1 class="mb-3">Haruna Adoga, PhD</h1>
+                    <p class="lead mb-4">High-Performance Computing Systems Architect and Cloud Infrastructure Specialist</p>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#about" class="btn btn-outline-primary">View Profile</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 text-center">
+                    <img src="images/haruna.jpg" alt="Dr. Haruna Adoga" class="img-fluid rounded-circle profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <h2 class="section-title">Professional Profile</h2>
+            
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p class="lead">I architect and optimize high-performance computing infrastructure for AI and scientific workloads, with a research focus on network programmability and distributed systems.</p>
+                            
+                            <p>As an HPC Systems Engineer with a PhD in Computing Science from the University of Glasgow, I specialize in designing, automating, and managing large-scale on-premises and cloud infrastructures. My expertise spans:</p>
+                            
+                            <ul class="mb-4">
+                                <li>High-performance networking (200Gbps Ethernet) and storage solutions (Lustre, CEPH)</li>
+                                <li>Infrastructure as Code (Terraform, Ansible) and cloud platforms (OpenStack, AWS, GCP)</li>
+                                <li>Workload managers (Slurm) and container orchestration (Kubernetes)</li>
+                                <li>Network programmability, edge computing, and NFV performance optimization</li>
+                            </ul>
+                            
+                            <p>With over 10 years of experience in both industry and academia, I bridge the gap between cutting-edge research and production-grade infrastructure. I've published in top-tier conferences and journals while delivering robust systems that power scientific discovery and AI innovation.</p>
+                            
+                            <div class="social-icons mt-4">
+                                <a href="https://www.linkedin.com/in/haruna-adoga-72865517/" target="_blank" title="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://scholar.google.com/citations?user=CMYVj5UAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="https://www.github.com/harunaadoga/" target="_blank" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.youtube.com/c/HarunaUmarAdoga/" target="_blank" title="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-5 bg-dark">
+        <div class="container py-4">
+            <h2 class="section-title">Technical Expertise</h2>
+            <p class="mb-4">Core competencies across infrastructure design, automation, and optimization</p>
+            
+            <div class="row">
+                <!-- HPC Systems -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-server me-2 text-accent"></i>HPC Systems</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li class="mb-2">Lustre Parallel Filesystems</li>
+                                <li class="mb-2">CEPH Storage Clusters</li>
+                                <li class="mb-2">Slurm Workload Manager</li>
+                                <li>High-Performance Networking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cloud & Virtualization -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-cloud me-2 text-accent"></i>Cloud & Virtualization</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li class="mb-2">OpenStack Private Cloud</li>
+                                <li class="mb-2">Kubernetes Orchestration</li>
+                                <li class="mb-2">AWS/GCP Public Cloud</li>
+                                <li>Containerization (Docker)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Networking -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-network-wired me-2 text-accent"></i>Networking</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li class="mb-2">200Gbps Ethernet</li>
+                                <li class="mb-2">Data Center Networking</li>
+                                <li class="mb-2">Software-Defined Networks</li>
+                                <li>NFV Performance Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Automation & DevOps -->
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-code me-2 text-accent"></i>Automation & DevOps</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="mb-0">
+                                <li class="mb-2">Terraform (IaC)</li>
+                                <li class="mb-2">Ansible Automation</li>
+                                <li class="mb-2">Python Development</li>
+                                <li>CI/CD Pipelines</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="mt-4">
+                <h4 class="mb-3">Industry Certifications</h4>
+                <div class="d-flex flex-wrap">
+                    <span class="skill-badge">CCNP Routing & Switching</span>
+                    <span class="skill-badge">AWS Certified Solutions Practitioner</span>
+                    <span class="skill-badge">Red Hat Certified System Administrator</span>
+                    <span class="skill-badge">ITILv3 Certified</span>
+                    <span class="skill-badge">IEEE Member</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-5">
+        <div class="container py-4">
+            <h2 class="section-title">Research Publications</h2>
+            <p class="mb-4">Selected academic contributions in network systems</p>
+            
+            <div class="card">
+                <!-- Publication 1 -->
+                <div class="publication-item">
+                    <h4 class="mb-2">Leveraging NFV Heterogeneity at the Network Edge</h4>
+                    <p class="text-muted mb-2">PhD Thesis, University of Glasgow, 2024</p>
+                    <p class="mb-2">This doctoral research presents a comprehensive evaluation of Network Function Virtualization (NFV) frameworks, proposing novel methodologies for performance optimization in edge computing environments.</p>
+                    <a href="https://theses.gla.ac.uk/84344/" target="_blank" class="btn btn-sm btn-outline-primary">Read Thesis</a>
+                </div>
+                
+                <!-- Publication 2 -->
+                <div class="publication-item">
+                    <h4 class="mb-2">Network Function Virtualization and Service Function Chaining Frameworks</h4>
+                    <p class="text-muted mb-2">MDPI Future Internet, 2022</p>
+                    <p class="mb-2">A systematic review of NFV and SFC frameworks, analyzing their architectures, performance characteristics, and suitability for different deployment scenarios.</p>
+                    <a href="https://www.mdpi.com/1999-5903/14/2/59" target="_blank" class="btn btn-sm btn-outline-primary">Read Publication</a>
+                </div>
+                
+                <!-- Publication 3 -->
+                <div class="publication-item">
+                    <h4 class="mb-2">Performance Evaluation of Heterogeneous NFV Frameworks</h4>
+                    <p class="text-muted mb-2">IEEE Conference Paper, 2021</p>
+                    <p class="mb-2">Empirical evaluation comparing the performance of diverse NFV implementations, providing insights for infrastructure architects and network operators.</p>
+                    <a href="https://eprints.gla.ac.uk/270458/" target="_blank" class="btn btn-sm btn-outline-primary">View Paper</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="https://scholar.google.com/citations?user=CMYVj5UAAAAJ&hl=en" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-graduation-cap me-2"></i>View All Publications
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark">
+        <div class="container py-4">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="mb-4">Available for consulting engagements and research collaborations</p>
+            
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <h4 class="mb-2">Dr. Haruna Adoga</h4>
+                        <p class="text-muted mb-3"><i class="fas fa-envelope me-2 text-accent"></i> haruna.umar.adoga@gmail.com</p>
+                        <p class="text-muted"><i class="fas fa-map-marker-alt me-2 text-accent"></i> Glasgow, United Kingdom</p>
+                    </div>
                     
-                    <!-- Social Icons -->
-
-  <!-- Social Icons -->
-  <div class="social-icons mt-4">
-
-	<a href="https://www.linkedin.com/in/haruna-adoga-72865517/" target="_blank" class="btn btn-outline-secondary btn-lg m-2"><i class="fab fa-linkedin"></i></a>
-	<a href="https://www.youtube.com/c/HarunaUmarAdoga/" target="_blank" class="btn btn-outline-secondary btn-lg m-2"><i class="fab fa-youtube"></i></a>
-	<a href="https://scholar.google.com/citations?user=CMYVj5UAAAAJ&hl=en" target="_blank" class="btn btn-outline-secondary btn-lg m-2"><i class="fas fa-graduation-cap"></i></a>
-	<a href="https://www.github.com/harunaadoga/" target="_blank" class="btn btn-outline-secondary btn-lg m-2"><i class="fab fa-github"></i></a>
-</div>
-
-                    
-                    <a href="#about" class="btn btn-secondary btn-lg mt-4">About Haruna</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section py-5">
-        <div class="container">
-    
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-
-							<p class="lead text-dark"> I am a seasoned Network, Systems, and HPC Engineer with a proven track record in designing, automating, and managing large-scale on-premises and cloud infrastructures. I hold a PhD from the University of Glasgow, with a research focus on Network Programmability, Edge/Cloud Computing, and Network Function Virtualization (NFV). </p> 
-							
-							<p class="lead text-dark"> My expertise spans Infrastructure as Code (IaC) using Terraform, automation with Ansible, datacentre networking and server administration, high-speed 200Gbps ethernet networking, Lustre storage, CEPH storage, as well as deployment and management of public and private clouds, including OpenStack. I also lead strategic IT planning initiatives, helping organizations align infrastructure with business goals. </p> 
-							
-							<p class="lead text-dark"> In addition to my technical skills, I am a passionate educator and researcher, with over 10 years of experience teaching Computing Science courses at the university level. I have published several research papers in top-tier conferences and journals, and I am a regular reviewer for IEEE and ACM conferences.
-
-							<p class="lead text-dark"> I am currently a High-Performance Computing (HPC) Systems Engineer at the University of Sussex, UK, where I am responsible for designing, deploying, and managing the university's HPC infrastructure. I am also a Researcher and Tutor at the University of Glasgow, where I teach Linux and HPC courses and conduct research in Network Programmability and NFV.
-
-							<p class="lead text-dark"> I am always looking for new opportunities to collaborate on exciting projects, so please feel free to reach out if you would like to work together!
-								
-
+                    <div class="text-center">
+                        <p class="mb-3">I'm available for:</p>
+                        <div class="d-flex flex-wrap justify-content-center mb-4">
+                            <span class="skill-badge">HPC Consulting</span>
+                            <span class="skill-badge">Cloud Architecture</span>
+                            <span class="skill-badge">Research Collaboration</span>
+                        </div>
+                        
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/haruna-adoga-72865517/" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=CMYVj5UAAAAJ&hl=en" target="_blank" title="Google Scholar">
+                                <i class="fas fa-graduation-cap"></i>
+                            </a>
+                            <a href="https://www.github.com/harunaadoga/" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume-section py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Resume</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <h3>Experience</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-4">
-                            <h4>HPC Systems Engineer</h4>
-                            <p><strong>University of Sussex, UK</strong> | Aug 2023 - Present</p>
-                        </li>
-                        <li class="mb-4">
-                            <h4>Researcher & Tutor: Linux and HPC</h4>
-                            <p><strong>University of Glasgow, UK</strong> | Jan 2020 - Present</p>
-                        </li>
-                        <li class="mb-4">
-                            <h4>Lecturer - Systems Engineer</h4>
-                            <p><strong>Federal University Lafia (Hybrid) </strong> | May 2012 - Present</p>
-                        </li>
-                        <li class="mb-4">
-                            <h4>Technical Support Specialist</h4>
-                            <p><strong>Airtel Telecoms</strong> | March 2011 - May 2012</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <h3>Education</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-4">
-                            <h4>PhD in Computing Science</h4>
-                            <p><strong>University of Glasgow</strong> | June 2024</p>
-                        </li>
-                        <li class="mb-4">
-                            <h4>MSc in Computing Science</h4>
-                            <p><strong>University of Hertfordshire</strong> | 2016</p>
-                        </li>
-                        <li class="mb-4">
-                            <h4>B.Eng in Electrical and Electronics Engineering</h4>
-                            <p><strong>University of Maiduguri</strong> | 2009</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download CV and Resume Section -->
-    <section id="download" class="download-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Download CV and Resume</h2>
-            <div class="row text-center">
-                <div class="col-lg-6 mb-4">
-                    <a href="/documents/Haruna_CV.pdf" download class="btn btn-secondary btn-lg">
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <a href="/documents/Haruna_Resume.pdf" download class="btn btn-secondary btn-lg">
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Selected Projects</h2>
-            <div class="row">
-                <!-- Project 1 -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h4 class="card-title">Performance Evaluation of Heterogeneous NFV Frameworks</h4>
-                            <p class="card-text">Evaluated the performance benefits of SDN-aware data-plane implementations compared to diverse acceleration and process-based NFV frameworks.</p>
-                            <a href="https://eprints.gla.ac.uk/270458/" target="_blank" class="btn btn-secondary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Project 1 -->
-
-                <!-- Project 2 -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h4 class="card-title">Home Automation API</h4>
-                            <p class="card-text">A Java Application Programming Interface (API) for smart home appliances automation.</p>
-                            <a href="https://github.com/harunaadoga/Smarthome-API" target="_blank" class="btn btn-secondary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Project 2 -->
-
-                <!-- Project 3 -->
-                <div class="col-lg-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h4 class="card-title">Network and OS Penetration Testing</h4>
-                            <p class="card-text">Conducted penetration testing on networks and operating systems to identify vulnerabilities.</p>
-                            <a href="#" target="_blank" class="btn btn-secondary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Project 3 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog/Publications Section -->
-    <section id="blog" class="blog-section py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Blog/Publications</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <!-- Blog Post 1 -->
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <h4 class="card-title">Leveraging NFV Heterogeneity at the Network Edge</h4>
-                            <p class="card-text">PhD Computing Science Thesis - Dr Haruna Umar Adoga, University of Glasgow, UK, May 2024.</p>
-                            <a href="https://theses.gla.ac.uk/84344/" target="_blank" class="btn btn-secondary">Read More</a>
-                        </div>
-                    </div>
-                    <!-- End Blog Post 1 -->
-
-                    <!-- Blog Post 2 -->
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <h4 class="card-title">Towards Latency-aware vNF Placement on Heterogeneous Hosts at the Network Edge</h4>
-                            <p class="card-text">IEEE Global Communications Conference - GLOBECOM 2023, Kuala Lumpur, Malaysia, December 2023.</p>
-                            <a href="https://scholar.google.com/citations?user=CMYVj5UAAAAJ&hl=en" target="_blank" class="btn btn-secondary">Read More</a>
-                        </div>
-                    </div>
-                    <!-- End Blog Post 2 -->
-
-                    <!-- Blog Post 3 -->
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <h4 class="card-title">On the Performance Benefits of Heterogeneous Virtual Network Function Execution Frameworks</h4>
-                            <p class="card-text">IEEE NetSoft PVE-SDN Conference, Milan, Italy, June 2022.</p>
-                            <a href="https://ieeexplore.ieee.org/document/9844115" target="_blank" class="btn btn-secondary">Read More</a>
-                        </div>
-                    </div>
-                    <!-- End Blog Post 3 -->
-
-<!-- Blog Post 4 -->
-<div class="card mb-4 shadow-sm">
-    <div class="card-body">
-        <h4 class="card-title">Network Function Virtualization and Service Function Chaining Frameworks: A Comprehensive Review of Requirements, Objectives, Implementations, and Open Research Challenges</h4>
-        <p class="card-text">MDPI Future Internet, Switzerland, 2022.</p>
-        <a href="https://www.mdpi.com/1999-5903/14/2/59" target="_blank" class="btn btn-secondary">Read More</a>
-    </div>
-</div>
-<!-- End Blog Post 4 -->
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-<!-- Contact Section -->
-<section id="contact" class="contact-section py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">Let's talk!</h2>
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <p class="lead">I am readily available to collaborate on industry and academia projects, as well as worthy noble causes!</p>
-
-                <!-- Embedded Google Form -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdER4VWy-u25NyaUOmFEtSDM31Hb_9At0gcE8u2F1OUdxUC9A/viewform?embedded=true" 
-                        width="100%" 
-                        height="800" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0"
-                        style="border: none; border-radius: 8px;"
-                        class="shadow-lg">
-                    Loading...
-                </iframe>
-
-        
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 
     <!-- Footer -->
-    <footer class="footer bg-dark text-white text-center py-4">
+    <footer class="py-4">
         <div class="container">
-            <p class="mb-0">&copy; 2025 Haruna Adoga. All rights reserved.</p>
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Dr. Haruna Adoga. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed for professional engagement</p>
+                </div>
+            </div>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Theme Toggle Script -->
+    
+    <!-- Smooth Scroll -->
     <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            body.classList.toggle('light-theme');
-            const isDarkTheme = body.classList.contains('dark-theme');
-            themeToggle.innerHTML = isDarkTheme ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
