@@ -2,7 +2,7 @@ name: Build and deploy
 
 on:
   push:
-    branches: [master, main]
+    branches: [master]
   schedule:
     # Rebuild daily so the YouTube, GitHub and Medium feeds stay fresh
     - cron: "17 5 * * *"
