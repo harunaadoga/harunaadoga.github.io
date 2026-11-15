@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: Contact
+description: Contact Dr Haruna Adoga about speaking, advisory work, research collaboration, training or media requests.
+permalink: /contact/
+---
+{% from "partials/icons.njk" import icon, socials %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Start a conversation.</h1>
+    <p class="lede">Wherever you are in the world, email is the best way to reach me. Write your message below and it will open, ready to send, in your own email.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap contact">
+    <form class="form callout" data-contact-form data-to="{{ site.email }}">
+      <div class="form__row">
+        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="c-org">Organisation <span class="muted">(optional)</span></label><input id="c-org" name="organisation" autocomplete="organization"></div>
+      </div>
+      <div class="form__row">
+        <div class="field">
+          <label for="c-topic">What is this about?</label>
+          <select id="c-topic" name="topic" required>
+            <option>Speaking</option>
+            <option>Advisory</option>
+            <option>Research collaboration</option>
+            <option>Training and mentoring</option>
+            <option>Media or podcast</option>
+            <option>Opportunity</option>
+            <option selected>General</option>
+          </select>
+        </div>
+        <div class="field"><label for="c-subject">Subject</label><input id="c-subject" name="subject" required></div>
+      </div>
+      <div class="field"><label for="c-message">Message</label><textarea id="c-message" name="message" required placeholder="A little context helps: who you are, what you need, and any dates."></textarea></div>
+      <div class="form__actions">
+        <button class="btn btn--primary" type="submit" name="via" value="mailto">{{ icon("mail") }} Open in my email app</button>
+        <button class="btn btn--ghost" type="submit" name="via" value="gmail">Open in Gmail</button>
+        <button class="btn btn--ghost" type="submit" name="via" value="copy">Copy message</button>
+      </div>
+      <p class="form__note">Nothing you type here is stored or sent to this website. Your message goes straight from your email account to mine.</p>
+    </form>
+
+    <aside>
+      <p class="eyebrow">Direct</p>
+      <div class="email-box">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <button class="chip" type="button" data-copy="{{ site.email }}" data-copy-msg="Email address copied">Copy</button>
+      </div>
+      <dl class="deflist" style="grid-template-columns: 110px minmax(0, 1fr); margin-top: 28px;">
+        <dt>Time zone</dt><dd>UK time (GMT / BST). Happy to meet across time zones.</dd>
+        <dt>Based</dt><dd>{{ site.location }}</dd>
+      </dl>
+      <p class="eyebrow" style="margin-top: 36px;">Elsewhere</p>
+      <p class="muted" style="margin-bottom: 0;">LinkedIn is best for a quick introduction.</p>
+      {{ socials(site) }}
+    </aside>
+  </div>
+</section>

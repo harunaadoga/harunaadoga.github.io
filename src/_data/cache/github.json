@@ -1,0 +1,50 @@
+[
+  {
+    "name": "ansible_lab",
+    "url": "https://github.com/harunaadoga/ansible_lab",
+    "description": "Ansible Automation",
+    "language": "HTML",
+    "stars": 1,
+    "pushed": "2026-11-14T22:29:34Z"
+  },
+  {
+    "name": "linux-server-hardening",
+    "url": "https://github.com/harunaadoga/linux-server-hardening",
+    "description": "Linux server hardening step by step, following the CIS Benchmark: attack surface, user accounts, SSH, firewalld and more. A video and a read-only check script for every episode. Written for RHEL, Rocky Linux and AlmaLinux 9 and 10.",
+    "language": "Shell",
+    "stars": 0,
+    "pushed": "2026-11-07T22:36:09Z"
+  },
+  {
+    "name": "rhcsa-ex200-exam-labs",
+    "url": "https://github.com/harunaadoga/rhcsa-ex200-exam-labs",
+    "description": "Free RHCSA EX200 hands-on labs for RHEL, Rocky Linux and AlmaLinux 9/10: practice tasks, solutions and a full mock exam, organised by the official exam objectives, with a video walkthrough for every lab.",
+    "language": "Shell",
+    "stars": 40,
+    "pushed": "2026-11-04T22:40:11Z"
+  },
+  {
+    "name": "research-platform-lab",
+    "url": "https://github.com/harunaadoga/research-platform-lab",
+    "description": "DevOps IaC Infa for HPC",
+    "language": "HCL",
+    "stars": 0,
+    "pushed": "2026-08-28T20:16:53Z"
+  },
+  {
+    "name": "vaultwarden-lab",
+    "url": "https://github.com/harunaadoga/vaultwarden-lab",
+    "description": "Self-hosted Bitwarden password manager lab - tested setup guides for Mac, Rocky Linux 9, and Ubuntu using Vaultwarden and Docker/Podman",
+    "language": "Shell",
+    "stars": 0,
+    "pushed": "2026-08-11T14:40:07Z"
+  },
+  {
+    "name": "kernel-based-vnf-firewall",
+    "url": "https://github.com/harunaadoga/kernel-based-vnf-firewall",
+    "description": "Kernel-based Firewall Function",
+    "language": "Shell",
+    "stars": 1,
+    "pushed": "2025-03-19T22:38:36Z"
+  }
+]

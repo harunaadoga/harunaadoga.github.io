@@ -1,0 +1,113 @@
+---
+layout: layouts/base.njk
+title: About
+description: Career, education and recognition of Dr Haruna Adoga, HPC infrastructure technical lead at the University of Sussex and PhD graduate of the University of Glasgow.
+permalink: /about/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/cards.njk" import cta %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h1>An engineer who did the research, and a researcher who runs production.</h1>
+    <p class="lede">I have spent fifteen years in Linux systems, networking, cloud and research computing. Today I am the HPC infrastructure technical lead at the University of Sussex, where I set technical strategy, own the infrastructure stack, drive procurement and represent the university with technology partners and vendors.</p>
+  </div>
+</section>
+
+<section class="section section--line" style="padding-top: 56px;">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px);">
+    <div class="prose reveal">
+      <p>My career started with networks: Cisco routing and switching for government offices, then cloud and automation for clients moving off physical estates. For eight years I also lectured at a university while running its Linux servers, which taught me to explain things properly as well as build them.</p>
+      <p>In 2020 I moved to the University of Glasgow for a PhD in Computing Science. The research was on network function virtualisation at the edge: how to place network services across mixed hardware so that latency stays low. I ran the systems research lab and taught MSc students while I was there.</p>
+      <p>Since 2023 I have worked on research computing at Sussex. I was a core technical contributor to the Artemis Hybrid Research Cluster from requirements through to production, and that team was shortlisted in the Sussex Awards 2025. I am as comfortable setting direction and mentoring colleagues as I am cabling a rack or debugging a filesystem.</p>
+      <p>Outside the day job I teach. My YouTube channel covers Linux, server hardening and infrastructure careers, with free labs on GitHub for people preparing for certification.</p>
+    </div>
+    <div class="reveal" style="--d: 120ms">
+      <div class="callout">
+        <p class="eyebrow">At a glance</p>
+        <dl class="deflist" style="grid-template-columns: 130px minmax(0, 1fr);">
+          <dt>Now</dt><dd>HPC Systems Engineer and infrastructure technical lead, University of Sussex</dd>
+          <dt>Doctorate</dt><dd>PhD Computing Science, University of Glasgow (2024)</dd>
+          <dt>Focus</dt><dd>HPC, research computing, datacentre networking, private cloud</dd>
+          <dt>Based</dt><dd>{{ site.location }}</dd>
+          <dt>Member</dt><dd>{% for m in profile.memberships %}{{ m.short }}{% if not loop.last %}, {% endif %}{% endfor %}</dd>
+        </dl>
+      </div>
+      {%- for r in profile.recognition %}
+      <div class="callout" style="margin-top: 20px;">
+        <p class="eyebrow" style="color: var(--gold);">Recognition</p>
+        <h3>{{ r.title }}</h3>
+        <p class="muted" style="margin: 0;">{{ r.body }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head reveal"><div><p class="eyebrow">Experience</p><h2>Career</h2></div></div>
+    <ol class="timeline">
+      {%- for job in profile.experience %}
+      <li class="timeline__item reveal">
+        <div class="timeline__period">{{ job.period }}</div>
+        <div>
+          <h3>{{ job.role }}</h3>
+          <div class="timeline__org">{{ job.org }}{% if job.place %} · {{ job.place }}{% endif %}</div>
+          <p>{{ job.summary }}</p>
+          <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px);">
+    <div class="reveal">
+      <p class="eyebrow">Education</p>
+      <h2>Degrees</h2>
+      {%- for e in profile.education %}
+      <div class="pub" style="grid-template-columns: 1fr;">
+        <div>
+          <div class="meta">{{ e.period }}</div>
+          <h3>{{ e.award }}</h3>
+          <p>{{ e.org }}{% if e.note %}<br><span class="muted">{{ e.note }}</span>{% endif %}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <div class="reveal" style="--d: 120ms">
+      <p class="eyebrow">Credentials</p>
+      <h2>Certifications and memberships</h2>
+      <ul class="plain" style="border-top: 1px solid var(--line);">
+        {%- for c in profile.certifications %}
+        <li style="padding: 14px 0; border-bottom: 1px solid var(--line);">{{ c }}</li>
+        {%- endfor %}
+      </ul>
+      <ul class="plain" style="margin-top: 28px; display: grid; gap: 12px;">
+        {%- for m in profile.memberships %}
+        <li><strong>{{ m.short }}</strong> <span class="muted">· {{ m.name }}, member since {{ m.since }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line">
+  <div class="wrap">
+    <div class="section__head reveal"><div><p class="eyebrow">Toolbox</p><h2>Technologies I work with</h2></div></div>
+    <div class="grid grid--3">
+      {%- for g in profile.skills %}
+      <div class="card reveal" style="--d: {{ loop.index0 * 50 }}ms">
+        <h3 style="font-size: 1.15rem;">{{ g.group }}</h3>
+        <ul class="chips" style="padding-top: 6px;">{% for i in g.items %}<li class="chip">{{ i }}</li>{% endfor %}</ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{{ cta(site, "Working on something I can help with?") }}

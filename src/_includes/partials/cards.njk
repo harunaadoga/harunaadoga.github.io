@@ -1,0 +1,48 @@
+{% from "partials/icons.njk" import icon %}
+
+{%- macro postRow(post) -%}
+<li class="post-row" data-post data-topics="{{ (post.data.topics or []) | join('|') }}" data-text="{{ (post.data.title + ' ' + (post.data.description or '') + ' ' + ((post.data.topics or []) | join(' '))) | lower }}">
+  <time class="post-row__date" datetime="{{ post.date | date('iso') }}">{{ post.date | date('short') }}</time>
+  <div>
+    <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+    <p>{{ post.data.description }}</p>
+    <ul class="chips">
+      <li class="chip">{{ post.templateContent | readingTime }} min read</li>
+      {%- for t in post.data.topics or [] %}
+      <li><a class="chip" href="/writing/?topic={{ t | urlencode }}">{{ t }}</a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <span class="post-row__arrow" aria-hidden="true">{{ icon("arrow") }}</span>
+</li>
+{%- endmacro -%}
+
+{%- macro videoCard(v, feature=false) -%}
+<article class="card video{% if feature %} video--feature{% endif %}">
+  <button class="video__media" type="button" data-video="{{ v.id }}" aria-label="Play: {{ v.title }}">
+    <img src="{{ v.thumb }}" alt="" loading="lazy" width="480" height="360">
+    <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.500v13l11-6.500z"/></svg></span>
+  </button>
+  <div class="video__body">
+    <div class="meta"><span class="kind">YouTube</span><time datetime="{{ v.published }}" data-relative>{{ v.published | date('short') }}</time></div>
+    <h3><a href="{{ v.url }}" target="_blank" rel="noopener">{{ v.title }}</a></h3>
+  </div>
+</article>
+{%- endmacro -%}
+
+{%- macro cta(site, heading="Let's talk.", body="Speaking invitations, advisory work, research collaboration, or a conversation about infrastructure.") -%}
+<section class="section">
+  <div class="wrap">
+    <div class="callout callout--accent cta reveal">
+      <div>
+        <h2>{{ heading }}</h2>
+        <p>{{ body }}</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="/contact/">Get in touch {{ icon("arrow") }}</a>
+        <a class="btn btn--ghost" href="{{ site.social.linkedin }}" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+{%- endmacro -%}

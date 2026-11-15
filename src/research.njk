@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+title: Research
+description: Doctoral thesis, peer-reviewed publications and research interests of Dr Haruna Adoga, covering network function virtualisation, edge computing and research computing infrastructure.
+permalink: /research/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/cards.njk" import cta %}
+{% set r = profile.research %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Research</p>
+    <h1>Networks that adapt to the hardware they run on.</h1>
+    <p class="lede">My research sits where networking meets systems: virtualised network functions, programmable data planes and the edge. I now apply the same thinking to the networks and platforms behind research computing.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="{{ site.social.scholar }}" target="_blank" rel="noopener">Google Scholar {{ icon("ext") }}</a>
+      <a class="btn btn--ghost" href="{{ site.social.orcid }}" target="_blank" rel="noopener">ORCID {{ icon("ext") }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px); align-items: start;">
+    <div class="reveal">
+      <p class="eyebrow">Doctoral thesis · {{ r.thesis.org }} · {{ r.thesis.year }}</p>
+      <h2>{{ r.thesis.title }}</h2>
+      <p>{{ r.thesis.summary }}</p>
+      <p class="muted">Supervised by {{ r.thesis.supervisors }}.</p>
+      <p><a class="link-arrow" href="{{ r.thesis.url }}" target="_blank" rel="noopener">Read the thesis {{ icon("arrow") }}</a></p>
+    </div>
+    <div class="callout reveal" style="--d: 120ms">
+      <p class="eyebrow">Contributions</p>
+      <ol style="margin: 0; padding-left: 1.2em; display: grid; gap: 12px;">
+        {%- for c in r.thesis.contributions %}<li>{{ c }}</li>{% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head reveal"><div><p class="eyebrow">Publications</p><h2>Peer-reviewed work</h2></div></div>
+    {%- for p in r.publications %}
+    <article class="pub reveal">
+      <div class="pub__year">{{ p.year }}</div>
+      <div>
+        <div class="meta"><span class="kind">{{ p.type }}</span></div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.venue }}</p>
+        <ul class="chips">
+          <li><a class="chip" href="https://doi.org/{{ p.doi }}" target="_blank" rel="noopener">DOI: {{ p.doi }}</a></li>
+          <li><button class="chip" type="button" data-copy="https://doi.org/{{ p.doi }}" data-copy-msg="DOI link copied">Copy DOI link</button></li>
+        </ul>
+      </div>
+    </article>
+    {%- endfor %}
+    <p class="muted" style="margin-top: 24px;">Full author lists and citation counts are on <a href="{{ site.social.scholar }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </div>
+</section>
+
+<section class="section section--line">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px);">
+    <div class="reveal">
+      <p class="eyebrow">Interests</p>
+      <h2>What I think about</h2>
+      <ul class="plain" style="border-top: 1px solid var(--line);">
+        {%- for i in r.interests %}<li style="padding: 14px 0; border-bottom: 1px solid var(--line);">{{ i }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="reveal" style="--d: 120ms">
+      <p class="eyebrow">Service</p>
+      <h2>Community and review</h2>
+      <ul class="plain" style="border-top: 1px solid var(--line);">
+        {%- for s in r.service %}<li style="padding: 14px 0; border-bottom: 1px solid var(--line);">{{ s }}</li>{% endfor %}
+      </ul>
+      {%- if github.length %}
+      <p class="eyebrow" style="margin-top: 40px;">Open code</p>
+      <ul class="plain" style="display: grid; gap: 14px;">
+        {%- for repo in github | limit(4) %}
+        <li><a href="{{ repo.url }}" target="_blank" rel="noopener"><strong>{{ repo.name }}</strong></a><br><span class="muted" style="font-size: 0.92rem;">{{ repo.description | truncate(120) }}</span></li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+{{ cta(site, "Interested in collaborating?", "I welcome conversations about joint research, peer review, infrastructure for funded projects and guest lectures.") }}

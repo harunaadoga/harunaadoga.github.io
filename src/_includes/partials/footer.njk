@@ -1,0 +1,30 @@
+{% from "partials/icons.njk" import icon, socials %}
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div>
+      <p class="site-footer__name">{{ site.name }}</p>
+      <p class="muted">HPC and research computing infrastructure. PhD, University of Glasgow. Based in the {{ site.location }}, working with people everywhere.</p>
+      {{ socials(site) }}
+    </div>
+    <nav aria-label="Footer">
+      <p class="eyebrow">Site</p>
+      <ul class="plain">
+        {%- for item in site.nav %}
+        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <div>
+      <p class="eyebrow">Stay in touch</p>
+      <ul class="plain">
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="/feed.xml">RSS feed</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__base">
+    <span>&copy; {% year %} Haruna Adoga. Views are my own and not those of my employer.</span>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>

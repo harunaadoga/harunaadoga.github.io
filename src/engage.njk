@@ -1,0 +1,55 @@
+---
+layout: layouts/base.njk
+title: Speaking and advisory
+description: Invite Dr Haruna Adoga to speak, advise on HPC and research computing infrastructure, collaborate on research, or train and mentor a team.
+permalink: /engage/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/cards.njk" import cta %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Speaking and advisory</p>
+    <h1>Ways we can work together.</h1>
+    <p class="lede">I work with universities, research groups, companies and non-profits. If your question involves large-scale compute, the networks beneath it, or the people who run it, I can probably help.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap grid grid--2">
+    {%- for e in profile.engage %}
+    <article class="card reveal" style="--d: {{ loop.index0 * 60 }}ms; padding: clamp(26px, 3.5vw, 40px);">
+      <div class="card__num">0{{ loop.index }}</div>
+      <h2 style="font-size: 1.9rem;">{{ e.title }}</h2>
+      <p>{{ e.body }}</p>
+      <ul class="chips" style="margin-bottom: 22px;">{% for t in e.topics %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
+      <p style="margin-top: auto;"><a class="link-arrow" href="/contact/?topic={{ e.title | urlencode }}">Enquire about {{ e.title | lower }} {{ icon("arrow") }}</a></p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px);">
+    <div class="reveal">
+      <p class="eyebrow">For organisers</p>
+      <h2>Speaker details</h2>
+      <p>Feel free to use this short biography in programmes and introductions.</p>
+      <div class="callout" id="bio">
+        <p style="margin: 0;">Dr Haruna Adoga is the HPC infrastructure technical lead at the University of Sussex, where he sets technical strategy for research computing. He holds a PhD in Computing Science from the University of Glasgow, has published at IEEE GLOBECOM and IEEE NetSoft, and has fifteen years of experience across Linux systems, networking and cloud. He teaches practical infrastructure skills on YouTube.</p>
+      </div>
+      <p style="margin-top: 16px;"><button class="btn btn--ghost" type="button" data-copy="Dr Haruna Adoga is the HPC infrastructure technical lead at the University of Sussex, where he sets technical strategy for research computing. He holds a PhD in Computing Science from the University of Glasgow, has published at IEEE GLOBECOM and IEEE NetSoft, and has fifteen years of experience across Linux systems, networking and cloud. He teaches practical infrastructure skills on YouTube." data-copy-msg="Biography copied">Copy biography</button></p>
+    </div>
+    <div class="reveal" style="--d: 120ms">
+      <p class="eyebrow">Good to know</p>
+      <h2>How I work</h2>
+      <dl class="deflist" style="grid-template-columns: 130px minmax(0, 1fr);">
+        <dt>Format</dt><dd>In person in the UK, or remote worldwide.</dd>
+        <dt>Audiences</dt><dd>Engineers, researchers, students, technical leaders and boards.</dd>
+        <dt>Capacity</dt><dd>These engagements are independent of my university role and fit around it.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+{{ cta(site, "Have a date or a problem in mind?", "Tell me about the audience, the timeline and what a good outcome looks like.") }}

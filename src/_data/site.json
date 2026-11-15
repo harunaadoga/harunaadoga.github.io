@@ -1,0 +1,33 @@
+{
+  "name": "Dr Haruna Adoga",
+  "shortName": "Haruna Adoga",
+  "url": "https://harunaadoga.github.io",
+  "tagline": "Research computing and HPC infrastructure leadership",
+  "description": "Dr Haruna Adoga leads HPC and research computing infrastructure in UK higher education. PhD in Computing Science, University of Glasgow. Writing on HPC, Linux, networking, research and careers in infrastructure.",
+  "email": "haruna.umar.adoga@gmail.com",
+  "location": "United Kingdom",
+  "language": "en-GB",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/haruna-adoga-72865517/",
+    "youtube": "https://www.youtube.com/@harunaadoga",
+    "github": "https://github.com/harunaadoga",
+    "scholar": "https://scholar.google.com/citations?user=CMYVj5UAAAAJ&hl=en",
+    "orcid": "https://orcid.org/0000-0001-5944-8473",
+    "x": "",
+    "tiktok": "",
+    "medium": ""
+  },
+  "feeds": {
+    "youtubeChannelId": "UCcs7cT_KebJheiFRq420g8g",
+    "githubUser": "harunaadoga",
+    "mediumHandle": ""
+  },
+  "nav": [
+    { "label": "About", "url": "/about/" },
+    { "label": "Research", "url": "/research/" },
+    { "label": "Writing", "url": "/writing/" },
+    { "label": "Media", "url": "/media/" },
+    { "label": "Speaking & advisory", "url": "/engage/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}

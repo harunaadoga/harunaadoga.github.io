@@ -1,0 +1,16 @@
+{
+  "name": "harunaadoga.github.io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --port 8080",
+    "build": "eleventy",
+    "new": "node scripts/new-post.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "markdown-it-anchor": "^9.2.1"
+  }
+}

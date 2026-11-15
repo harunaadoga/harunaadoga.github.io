@@ -1,0 +1,60 @@
+---
+layout: layouts/base.njk
+---
+{% from "partials/icons.njk" import icon %}
+{%- set posts = collections.posts %}
+{%- set prev = posts | getNextCollectionItem(page) %}
+{%- set next = posts | getPreviousCollectionItem(page) %}
+{%- set abs = page.url | absolute(site.url) %}
+<div class="progress" aria-hidden="true"></div>
+<article>
+  <header class="article-head">
+    <div class="wrap">
+      <p class="eyebrow"><a href="/writing/" style="text-decoration: none;">Writing</a>{% if draft %} · Draft{% endif %}</p>
+      <h1>{{ title }}</h1>
+      {% if description %}<p class="lede">{{ description }}</p>{% endif %}
+      <div class="meta" style="margin-top: 24px;">
+        <time datetime="{{ page.date | date('iso') }}">{{ page.date | date }}</time>
+        <span>{{ content | readingTime }} min read</span>
+        {%- if updated %}<span>Updated {{ updated | date }}</span>{% endif %}
+      </div>
+      <ul class="chips">{% for t in topics or [] %}<li><a class="chip" href="/writing/?topic={{ t | urlencode }}">{{ t }}</a></li>{% endfor %}</ul>
+    </div>
+  </header>
+  <div class="wrap article-layout">
+    <div>
+      <div class="prose" data-article>
+        {%- if video %}
+        <div class="card video" style="margin-bottom: 2em;">
+          <button class="video__media" type="button" data-video="{{ video }}" aria-label="Play the video for this post">
+            <img src="https://i.ytimg.com/vi/{{ video }}/hqdefault.jpg" alt="" width="480" height="360">
+            <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.500v13l11-6.500z"/></svg></span>
+          </button>
+        </div>
+        {%- endif %}
+        {{ content | safe }}
+      </div>
+      <footer class="article-foot">
+        <div class="share">
+          <span class="muted">Share:</span>
+          <a class="chip" href="https://www.linkedin.com/sharing/share-offsite/?url={{ abs | urlencode }}" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="chip" href="https://x.com/intent/tweet?url={{ abs | urlencode }}&text={{ title | urlencode }}" target="_blank" rel="noopener">X</a>
+          <a class="chip" href="mailto:?subject={{ title | urlencode }}&body={{ abs | urlencode }}">Email</a>
+          <button class="chip" type="button" data-share>Copy link</button>
+        </div>
+        <div class="author">
+          <img src="/assets/img/haruna-sm.webp" alt="" width="72" height="72">
+          <p><strong>Dr Haruna Adoga</strong> leads HPC infrastructure at the University of Sussex and holds a PhD in Computing Science from the University of Glasgow. <a href="/contact/">Get in touch</a> or <a href="/feed.xml">subscribe via RSS</a>.</p>
+        </div>
+        <nav class="pager" aria-label="More posts">
+          {%- if prev %}<a class="prev" href="{{ prev.url }}"><small>Older</small>{{ prev.data.title }}</a>{% endif %}
+          {%- if next %}<a class="next" href="{{ next.url }}"><small>Newer</small>{{ next.data.title }}</a>{% endif %}
+        </nav>
+      </footer>
+    </div>
+    <aside class="toc" aria-label="On this page">
+      <p class="eyebrow">On this page</p>
+      <div data-toc></div>
+    </aside>
+  </div>
+</article>

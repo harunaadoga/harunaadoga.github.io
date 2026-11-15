@@ -1,0 +1,187 @@
+{
+  "stats": [
+    { "value": 15, "suffix": "+", "label": "years across systems, networks and research computing" },
+    { "value": 3, "suffix": "", "label": "peer-reviewed publications, including IEEE GLOBECOM" },
+    { "value": 10, "suffix": "+", "label": "years teaching systems and networking" },
+    { "value": 200, "suffix": "G", "label": "Ethernet fabrics specified for research clusters" }
+  ],
+  "focus": [
+    {
+      "title": "HPC and research computing",
+      "body": "Owning the full stack of a university research cluster: scheduling, parallel storage, GPU compute for AI workloads, and the datacentre underneath it.",
+      "tags": ["Slurm", "Lustre", "Ceph", "GPU compute", "GridPP"]
+    },
+    {
+      "title": "Infrastructure strategy",
+      "body": "Technical roadmaps, capacity planning, procurement and vendor negotiation, so that research gets the infrastructure it needs and the money is well spent.",
+      "tags": ["Roadmaps", "Procurement", "Capacity planning", "Vendor partnerships"]
+    },
+    {
+      "title": "Networks and private cloud",
+      "body": "High-speed datacentre fabrics and OpenStack private cloud, automated end to end and documented so other engineers can run it.",
+      "tags": ["OpenStack", "RoCE", "BGP", "Ansible", "Terraform"]
+    },
+    {
+      "title": "Research and teaching",
+      "body": "A PhD on network function virtualisation at the edge, peer review for IEEE and MDPI, and more than a decade of teaching systems and networking.",
+      "tags": ["NFV", "Edge computing", "Peer review", "Teaching"]
+    }
+  ],
+  "experience": [
+    {
+      "role": "HPC Systems Engineer",
+      "org": "University of Sussex",
+      "place": "United Kingdom",
+      "period": "2023 – present",
+      "summary": "Technical lead for the university's HPC infrastructure: technical strategy, the full infrastructure stack, procurement, and external representation with technology partners and vendors.",
+      "points": [
+        "Core technical contributor to the end-to-end delivery of the Artemis Hybrid Research Cluster, from requirements and procurement through physical installation to production, including specifying the switching fabric the cluster adopted.",
+        "Helped design and build a production OpenStack private cloud with Kayobe, including its three-tier network architecture and power infrastructure.",
+        "Senior infrastructure authority and primary datacentre engineer for research computing: roadmap, capacity planning, rack design, power modelling and hardware lifecycle.",
+        "Runs Slurm scheduling for multi-user research environments, with Ceph and Lustre storage behind it, and automates services with Ansible, Terraform and Git-based CI/CD.",
+        "GridPP site security contact and Registration Authority operator; represents Sussex in GridPP operations and UK research network engineering forums.",
+        "Leads vendor negotiations for AI and HPC procurement, provides cover for senior management, and supports and mentors colleagues and researchers new to HPC."
+      ]
+    },
+    {
+      "role": "Research Computing Lab Assistant and Tutor",
+      "org": "University of Glasgow",
+      "place": "United Kingdom",
+      "period": "2021 – 2023",
+      "summary": "Ran the systems research computing lab alongside doctoral research.",
+      "points": [
+        "Administered the systems research lab and its HPC network infrastructure, with specialist Linux and networking support for research staff and students.",
+        "Taught MSc-level Python programming, networking and operating systems."
+      ]
+    },
+    {
+      "role": "Systems Engineer and Lecturer",
+      "org": "Federal University of Lafia",
+      "place": "Nigeria",
+      "period": "2012 – 2020",
+      "summary": "Combined university teaching with running the institution's Linux estate.",
+      "points": [
+        "Designed and taught undergraduate and postgraduate curriculum in Linux systems administration, DevOps, distributed systems and infrastructure automation.",
+        "Managed the university's Linux server fleet using infrastructure-as-code."
+      ]
+    },
+    {
+      "role": "Networks and Systems Engineer",
+      "org": "Independent consultant",
+      "place": "",
+      "period": "2010 – 2020",
+      "summary": "Network and cloud consulting for public-sector and private clients.",
+      "points": [
+        "Designed and deployed cloud infrastructure with Terraform and Ansible across AWS and on-premises environments, and advised on cloud migration.",
+        "Delivered multi-site LAN/WAN and internet connectivity for government offices using Cisco routing and switching.",
+        "Taught CCNA and CCNP certification courses with hands-on curriculum."
+      ]
+    }
+  ],
+  "education": [
+    { "award": "PhD, Computing Science", "org": "University of Glasgow", "period": "2020 – 2024", "note": "Thesis: Leveraging NFV heterogeneity at the network edge" },
+    { "award": "MSc, Computing Science (Distinction)", "org": "University of Hertfordshire", "period": "2014 – 2016", "note": "" },
+    { "award": "BEng, Electrical and Electronics Engineering", "org": "University of Maiduguri", "period": "2004 – 2009", "note": "" }
+  ],
+  "recognition": [
+    {
+      "title": "Sussex Awards 2025, shortlisted",
+      "body": "Institutional Improvement and Transformation category: team nomination for the delivery of the Artemis Hybrid Research Cluster."
+    }
+  ],
+  "certifications": [
+    "Red Hat Certified System Administrator (RHCSA), 2025",
+    "AWS Certified Cloud Practitioner",
+    "ITIL v3",
+    "Cisco CCNA",
+    "RHCE (in progress)"
+  ],
+  "memberships": [
+    { "short": "IEEE", "name": "Institute of Electrical and Electronics Engineers", "since": "2020" },
+    { "short": "BCS", "name": "BCS, The Chartered Institute for IT", "since": "2022" },
+    { "short": "IET", "name": "Institution of Engineering and Technology", "since": "2022" },
+    { "short": "ISOC", "name": "Internet Society", "since": "2019" }
+  ],
+  "skills": [
+    { "group": "HPC and research computing", "items": ["Slurm", "HTCondor", "GridPP ARC-CE", "CVMFS", "perfSONAR", "GPU compute", "MPI and OpenMP environments"] },
+    { "group": "Cloud and virtualisation", "items": ["OpenStack (Kayobe)", "AWS", "KVM", "Kubernetes", "Docker", "Apptainer", "Proxmox"] },
+    { "group": "Networking", "items": ["RoCE", "200G Ethernet", "OmniPath", "BGP", "IPv6", "Cumulus Linux", "Cisco IOS"] },
+    { "group": "Storage", "items": ["Ceph", "Lustre", "NFS with Kerberos", "Samba", "Distributed storage design"] },
+    { "group": "Linux and security", "items": ["RHEL", "Rocky Linux", "Ubuntu", "Hardening", "SELinux", "CVE remediation", "AD, SSSD and LDAP"] },
+    { "group": "Automation and observability", "items": ["Ansible", "Terraform", "GitHub Actions", "NetBox", "Python", "Bash", "Prometheus", "Grafana"] }
+  ],
+  "research": {
+    "interests": [
+      "Network function virtualisation and service function chaining",
+      "Edge computing and latency-aware placement",
+      "Programmable data planes (P4, SmartNICs)",
+      "High-performance networking for HPC and AI workloads",
+      "Research computing infrastructure and operations"
+    ],
+    "thesis": {
+      "title": "Leveraging NFV heterogeneity at the network edge",
+      "org": "University of Glasgow",
+      "year": 2024,
+      "supervisors": "Professor Dimitrios Pezaros and Dr Yehia Elkhatib",
+      "url": "https://doi.org/10.5525/gla.thesis.84344",
+      "summary": "Network functions such as firewalls, load balancers and intrusion detection now run on very different platforms: virtual machines, containers, programmable switches and SmartNICs. The thesis asks how to place chains of these functions across that mix of hosts at the network edge so that latency stays low.",
+      "contributions": [
+        "A taxonomy of heterogeneous frameworks for deploying virtual network functions.",
+        "Testbed measurements of what heterogeneous execution actually gains.",
+        "An integer linear programming model for hybrid placement across programmable data-plane devices and user-space hosts, minimising end-to-end latency.",
+        "HYPHA, a heuristic that finds near-optimal hybrid placements quickly.",
+        "A dynamic placement scheduler based on optimal stopping theory that reduces latency violations and migrations."
+      ]
+    },
+    "publications": [
+      {
+        "title": "Towards Latency-aware vNF Placement on Heterogeneous Hosts at the Network Edge",
+        "venue": "IEEE Global Communications Conference (GLOBECOM)",
+        "year": 2023,
+        "type": "Conference paper",
+        "doi": "10.1109/GLOBECOM54140.2023.10437107"
+      },
+      {
+        "title": "On the Performance Benefits of Heterogeneous Virtual Network Function Execution Frameworks",
+        "venue": "IEEE International Conference on Network Softwarization (NetSoft)",
+        "year": 2022,
+        "type": "Conference paper",
+        "doi": "10.1109/NetSoft54395.2022.9844115"
+      },
+      {
+        "title": "Network Function Virtualization and Service Function Chaining Frameworks: A Comprehensive Review of Requirements, Objectives, Implementations, and Open Research Challenges",
+        "venue": "Future Internet, 14(2), 59",
+        "year": 2022,
+        "type": "Journal article",
+        "doi": "10.3390/fi14020059"
+      }
+    ],
+    "service": [
+      "Peer reviewer for IEEE and MDPI venues",
+      "GridPP collaboration: site security contact and Registration Authority operator for Sussex",
+      "Participant in UK-wide research network engineering forums"
+    ]
+  },
+  "engage": [
+    {
+      "title": "Speaking",
+      "body": "Conference talks, panels and guest lectures on HPC and AI infrastructure, research computing operations, network programmability and building engineering careers.",
+      "topics": ["Building and running a university HPC cluster", "Infrastructure for AI workloads", "From PhD to production engineering", "Linux as a career foundation"]
+    },
+    {
+      "title": "Advisory",
+      "body": "Independent input for institutions and organisations planning research computing or infrastructure investment: architecture review, procurement strategy and operating model.",
+      "topics": ["HPC and storage architecture", "Datacentre networking", "OpenStack private cloud", "Capacity and lifecycle planning"]
+    },
+    {
+      "title": "Research collaboration",
+      "body": "Joint work, peer review and infrastructure partnership for projects in networking, edge computing and research computing.",
+      "topics": ["NFV and edge placement", "Programmable data planes", "Research infrastructure proposals", "Peer review"]
+    },
+    {
+      "title": "Training and mentoring",
+      "body": "Practical teaching for teams and individuals, built on real systems and on a YouTube channel that helps people get certified and hired.",
+      "topics": ["Linux and RHCSA", "Server hardening", "Automation with Ansible and Terraform", "Career mentoring"]
+    }
+  ]
+}

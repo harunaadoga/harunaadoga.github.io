@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- set pageTitle = (title + " · " + site.shortName) if title else (site.name + " · " + site.tagline) %}
+  {%- set pageDesc = description or site.description %}
+  {%- set canonical = page.url | absolute(site.url) %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <meta name="author" content="{{ site.name }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#121314">
+
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:type" content="{{ 'article' if layout == 'layouts/post.njk' else 'website' }}">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ pageDesc }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ '/assets/img/og.png' | absolute(site.url) }}">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.shortName }} · Writing" href="/feed.xml">
+
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var t = localStorage.getItem("theme");
+        if (t !== "light" && t !== "dark") t = "dark";
+        document.documentElement.dataset.theme = t;
+      } catch (e) { document.documentElement.dataset.theme = "dark"; }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css?v={{ build.time | slug }}">
+
+  <script type="application/ld+json">
+  {{ {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Haruna Adoga",
+    "honorificPrefix": "Dr",
+    "url": site.url,
+    "image": "/assets/img/haruna.webp" | absolute(site.url),
+    "jobTitle": "HPC Systems Engineer",
+    "worksFor": { "@type": "CollegeOrUniversity", "name": "University of Sussex" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of Glasgow" },
+      { "@type": "CollegeOrUniversity", "name": "University of Hertfordshire" },
+      { "@type": "CollegeOrUniversity", "name": "University of Maiduguri" }
+    ],
+    "knowsAbout": ["High-performance computing", "Research computing", "Linux", "OpenStack", "Datacentre networking", "Network function virtualisation", "Edge computing"],
+    "email": "mailto:" + site.email,
+    "sameAs": [site.social.linkedin, site.social.youtube, site.social.github, site.social.scholar, site.social.orcid]
+  } | json | safe }}
+  </script>
+  {% block head %}{% endblock %}
+</head>
+<body class="{{ bodyClass }}">
+  <a class="skip" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="/assets/js/main.js?v={{ build.time | slug }}" defer></script>
+</body>
+</html>

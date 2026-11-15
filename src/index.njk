@@ -1,0 +1,125 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+{% from "partials/icons.njk" import icon, socials %}
+{% from "partials/cards.njk" import postRow, videoCard, cta %}
+
+<section class="hero">
+  <canvas class="hero__canvas" data-topology aria-hidden="true"></canvas>
+  <div class="wrap hero__grid">
+    <div>
+      <p class="status"><span class="status__dot"></span>HPC infrastructure technical lead · University of Sussex</p>
+      <h1>Infrastructure that lets <em>research</em> move faster.</h1>
+      <p class="lede">I'm Dr Haruna Adoga. I design, build and run high-performance computing for universities, from the datacentre floor to the scheduler. I bring fifteen years of engineering and a PhD in Computing Science from the University of Glasgow to that work.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="/about/">About my work {{ icon("arrow") }}</a>
+        <a class="btn btn--ghost" href="/writing/">Read the writing</a>
+        <a class="btn btn--ghost" href="/contact/">Contact</a>
+      </div>
+      {{ socials(site) }}
+    </div>
+    <div class="portrait">
+      <div class="portrait__frame">
+        <img src="/assets/img/haruna.webp" alt="Portrait of Dr Haruna Adoga" width="720" height="644" fetchpriority="high">
+      </div>
+      <div class="portrait__card">
+        <strong>Dr Haruna Adoga</strong>
+        <span>PhD, University of Glasgow<br>Member of IEEE, BCS and IET</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="stats">
+    {%- for s in profile.stats %}
+    <div class="stat reveal" style="--d: {{ loop.index0 * 80 }}ms">
+      <div class="stat__value"><span data-count="{{ s.value }}">{{ s.value }}</span>{{ s.suffix }}</div>
+      <p class="stat__label">{{ s.label }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div>
+        <p class="eyebrow">What I do</p>
+        <h2>Engineering depth, with a researcher's rigour.</h2>
+      </div>
+      <a class="link-arrow" href="/about/">Full background {{ icon("arrow") }}</a>
+    </div>
+    <div class="grid grid--4">
+      {%- for f in profile.focus %}
+      <article class="card reveal" style="--d: {{ loop.index0 * 70 }}ms">
+        <div class="card__num">0{{ loop.index }}</div>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.body }}</p>
+        <ul class="chips">{% for t in f.tags %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div>
+        <p class="eyebrow">Writing</p>
+        <h2>Notes from the machine room and the lab.</h2>
+      </div>
+      <a class="link-arrow" href="/writing/">All posts {{ icon("arrow") }}</a>
+    </div>
+    <ul class="post-list reveal">
+      {%- for post in collections.posts | limit(3) %}
+      {{ postRow(post) }}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{%- if youtube.length %}
+<section class="section">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div>
+        <p class="eyebrow">Latest on YouTube</p>
+        <h2>Practical skills that get people certified and hired.</h2>
+      </div>
+      <a class="link-arrow" href="/media/">All videos and channels {{ icon("arrow") }}</a>
+    </div>
+    <div class="grid grid--4">
+      {%- for v in youtube | limit(5) %}
+      <div class="reveal{% if loop.first %} video--feature{% endif %}" style="--d: {{ loop.index0 * 60 }}ms; display: grid;">{{ videoCard(v) }}</div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section section--line">
+  <div class="wrap grid grid--2" style="gap: clamp(32px, 6vw, 80px); align-items: start;">
+    <div class="reveal">
+      <p class="eyebrow">Research</p>
+      <h2>Placing network functions where latency is lowest.</h2>
+      <p class="lede">My doctoral research at Glasgow looked at how to run chains of virtual network functions across very different hosts at the network edge, from containers to programmable switches, and still keep latency promises.</p>
+      <p><a class="link-arrow" href="/research/">Thesis and publications {{ icon("arrow") }}</a></p>
+    </div>
+    <div class="reveal" style="--d: 120ms">
+      {%- for p in profile.research.publications | limit(3) %}
+      <article class="pub" style="grid-template-columns: 64px minmax(0, 1fr); gap: 8px 20px;">
+        <div class="pub__year">{{ p.year }}</div>
+        <div>
+          <h3 style="font-size: 1.12rem;"><a href="https://doi.org/{{ p.doi }}" target="_blank" rel="noopener">{{ p.title }}</a></h3>
+          <p class="muted">{{ p.venue }}</p>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{{ cta(site) }}

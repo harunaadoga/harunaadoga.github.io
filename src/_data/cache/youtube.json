@@ -1,0 +1,122 @@
+[
+  {
+    "id": "hZBzFdYaN_s",
+    "title": "Do You Need Linux+ Before RHCSA? My Honest Experience",
+    "published": "2026-11-08T12:06:41+00:00",
+    "description": "Can you go straight into RHCSA with zero Linux experience? Absolutely. RHCSA was my first Linux certification. I skipped Linux+ and prepared through books, a practice lab and consistent hands-on exercises.",
+    "url": "https://www.youtube.com/watch?v=hZBzFdYaN_s",
+    "thumb": "https://i.ytimg.com/vi/hZBzFdYaN_s/hqdefault.jpg"
+  },
+  {
+    "id": "nlSPHkNYE50",
+    "title": "RHCSA EX200 Practice Labs on GitHub: Tasks, Solutions and Mock Exam",
+    "published": "2026-11-05T11:00:30+00:00",
+    "description": "Free hands-on Linux RHCSA EX200 practice labs on GitHub, with tasks and solutions for every exam objective and a mock exam. Works on RHEL, Rocky Linux and AlmaLinux 9 and 10.",
+    "url": "https://www.youtube.com/watch?v=nlSPHkNYE50",
+    "thumb": "https://i.ytimg.com/vi/nlSPHkNYE50/hqdefault.jpg"
+  },
+  {
+    "id": "eETayd2N5Pg",
+    "title": "What Happens After RHCSA? Jobs, Career Paths & Next Steps (EX200)",
+    "published": "2026-10-31T11:15:04+00:00",
+    "description": "You passed the Linux RHCSA EX200 — or you’re about to. What jobs can you apply for? What does the cert actually prove? What should you do in the first 30 days?",
+    "url": "https://www.youtube.com/watch?v=eETayd2N5Pg",
+    "thumb": "https://i.ytimg.com/vi/eETayd2N5Pg/hqdefault.jpg"
+  },
+  {
+    "id": "mwhIoJWVHKU",
+    "title": "Who is a Site Reliability Engineer?",
+    "published": "2026-10-29T14:45:12+00:00",
+    "description": "Who is a site reliability engineer and what do they actually do? SREs keep production systems running at scale. They write code to automate operations, define service level objectives (SLOs), manage incident response, an",
+    "url": "https://www.youtube.com/watch?v=mwhIoJWVHKU",
+    "thumb": "https://i.ytimg.com/vi/mwhIoJWVHKU/hqdefault.jpg"
+  },
+  {
+    "id": "e-GcC3mW6gs",
+    "title": "Linux Server Hardening Series - Ep 4: Firewall Configuration with firewalld",
+    "published": "2026-10-26T15:30:38+00:00",
+    "description": "How to configure firewalld on a Linux server the right way - 29 minutes, every command run live on RHEL 10.",
+    "url": "https://www.youtube.com/watch?v=e-GcC3mW6gs",
+    "thumb": "https://i.ytimg.com/vi/e-GcC3mW6gs/hqdefault.jpg"
+  },
+  {
+    "id": "iLuoOmA11i0",
+    "title": "Who is a Platform Engineer?",
+    "published": "2026-10-26T09:00:26+00:00",
+    "description": "Who is a platform engineer and what do they actually do? Platform engineers build and maintain the internal developer platform that other engineers use to ship code. They design CI/CD pipelines, manage Kubernetes cluster",
+    "url": "https://www.youtube.com/watch?v=iLuoOmA11i0",
+    "thumb": "https://i.ytimg.com/vi/iLuoOmA11i0/hqdefault.jpg"
+  },
+  {
+    "id": "Fr-zBvUJVC8",
+    "title": "What Does a Cloud Engineer Actually Do?",
+    "published": "2026-10-24T08:42:42+00:00",
+    "description": "What does a cloud engineer actually do every day? Cloud engineers build and manage infrastructure on AWS, Azure, and Google Cloud. They automate deployments with Terraform and Ansible, set up CI/CD pipelines, monitor pro",
+    "url": "https://www.youtube.com/watch?v=Fr-zBvUJVC8",
+    "thumb": "https://i.ytimg.com/vi/Fr-zBvUJVC8/hqdefault.jpg"
+  },
+  {
+    "id": "sjUHf6OsNdY",
+    "title": "Stop Learning Linux the Wrong Way (Do This Instead)",
+    "published": "2026-10-22T15:10:40+00:00",
+    "description": "Most people learning Linux waste months watching random videos with no clear path. Nothing connects. Six months later they still can’t manage a real server.",
+    "url": "https://www.youtube.com/watch?v=sjUHf6OsNdY",
+    "thumb": "https://i.ytimg.com/vi/sjUHf6OsNdY/hqdefault.jpg"
+  },
+  {
+    "id": "xPjogpvOukA",
+    "title": "Linux Server Hardening - Ep 3: SSH Hardening Linux Server",
+    "published": "2026-10-22T12:06:35+00:00",
+    "description": "SSH is the front door to your server. On most default installs, that door is wide open. In this episode we fix that.",
+    "url": "https://www.youtube.com/watch?v=xPjogpvOukA",
+    "thumb": "https://i.ytimg.com/vi/xPjogpvOukA/hqdefault.jpg"
+  },
+  {
+    "id": "fbEMHl9VFSw",
+    "title": "Linux Server Hardening - Ep 2: User Account Security, Password Policies & Banners| CIS Benchmark",
+    "published": "2026-10-15T11:50:44+00:00",
+    "description": "Episode 2 of 10. We lock down user accounts on Rocky Linux 10, following the CIS Benchmark and DISA STIG.",
+    "url": "https://www.youtube.com/watch?v=fbEMHl9VFSw",
+    "thumb": "https://i.ytimg.com/vi/fbEMHl9VFSw/hqdefault.jpg"
+  },
+  {
+    "id": "S3mupfUhPK0",
+    "title": "Stop Watching Random Linux Videos. Do This Instead",
+    "published": "2026-10-14T13:00:33+00:00",
+    "description": "You've been watching Linux tutorials for months and you still don't feel ready. That's not because the content is bad. It's because random videos teach random things in a random order and nothing connects.",
+    "url": "https://www.youtube.com/watch?v=S3mupfUhPK0",
+    "thumb": "https://i.ytimg.com/vi/S3mupfUhPK0/hqdefault.jpg"
+  },
+  {
+    "id": "xQHweeFyLtQ",
+    "title": "Linux Server Hardening - Ep 1: Reducing the Attack Surface (CIS Benchmark)",
+    "published": "2026-10-12T17:42:48+00:00",
+    "description": "Linux Server Hardening Series - Episode 1 of 10",
+    "url": "https://www.youtube.com/watch?v=xQHweeFyLtQ",
+    "thumb": "https://i.ytimg.com/vi/xQHweeFyLtQ/hqdefault.jpg"
+  },
+  {
+    "id": "FsKKte-uLjg",
+    "title": "If I Had to Learn Linux Again, This Is the Exact Order I’d Follow",
+    "published": "2026-10-11T09:13:09+00:00",
+    "description": "Most people learn Linux in the wrong order and wonder why it feels so hard. This is the exact sequence I'd follow if I was starting from zero today, based on how the skills actually build on each other.",
+    "url": "https://www.youtube.com/watch?v=FsKKte-uLjg",
+    "thumb": "https://i.ytimg.com/vi/FsKKte-uLjg/hqdefault.jpg"
+  },
+  {
+    "id": "AtoDv4OrD4U",
+    "title": "Linux Server Hardening Series - Intro",
+    "published": "2026-10-10T09:01:53+00:00",
+    "description": "This is a 10-part Linux server hardening series where I take a default Rocky Linux install and turn it into something that passes a CIS Benchmark security audit.",
+    "url": "https://www.youtube.com/watch?v=AtoDv4OrD4U",
+    "thumb": "https://i.ytimg.com/vi/AtoDv4OrD4U/hqdefault.jpg"
+  },
+  {
+    "id": "5ZmY3dv2x7s",
+    "title": "Practical IT Skills That Get You Certified & Hired | Channel Trailer",
+    "published": "2026-10-06T13:42:23+00:00",
+    "description": "Welcome to the channel.",
+    "url": "https://www.youtube.com/watch?v=5ZmY3dv2x7s",
+    "thumb": "https://i.ytimg.com/vi/5ZmY3dv2x7s/hqdefault.jpg"
+  }
+]

@@ -1,0 +1,104 @@
+---
+layout: layouts/base.njk
+title: Media
+description: Latest videos, posts and open-source work from Dr Haruna Adoga across YouTube, LinkedIn, GitHub and other channels.
+permalink: /media/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/cards.njk" import videoCard, cta %}
+{% set names = { linkedin: "LinkedIn", youtube: "YouTube", github: "GitHub", x: "X", tiktok: "TikTok", medium: "Medium", scholar: "Google Scholar", orcid: "ORCID" } %}
+{% set blurbs = { linkedin: "Professional updates and commentary", youtube: "Tutorials, series and career advice", github: "Labs, automation and research code", x: "Short takes and threads", tiktok: "Quick tips in under a minute", medium: "Longer essays", scholar: "Publications and citations", orcid: "Verified research record" } %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Media</p>
+    <h1>Where I publish and teach.</h1>
+    <p class="lede">New videos and code appear here automatically. Follow on whichever channel suits you.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="grid grid--4">
+      {%- for key in ["youtube", "linkedin", "github", "x", "tiktok", "medium", "scholar", "orcid"] %}
+      {%- if site.social[key] %}
+      <div class="card card--link channel">
+        <span class="channel__icon">{{ icon(key) }}</span>
+        <div><strong><a class="stretch" href="{{ site.social[key] }}" target="_blank" rel="me noopener">{{ names[key] }}</a></strong><span>{{ blurbs[key] }}</span></div>
+      </div>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{%- if youtube.length %}
+<section class="section section--tint" id="videos">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div><p class="eyebrow">YouTube · updated daily</p><h2>Latest videos</h2></div>
+      <a class="btn btn--primary" href="{{ site.social.youtube }}?sub_confirmation=1" target="_blank" rel="noopener">Subscribe {{ icon("ext") }}</a>
+    </div>
+    <div class="grid grid--3">
+      {%- for v in youtube | limit(12) %}
+      {{ videoCard(v) }}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+{%- if highlights.length %}
+<section class="section" id="highlights">
+  <div class="wrap">
+    <div class="section__head reveal"><div><p class="eyebrow">Highlights</p><h2>Recent posts elsewhere</h2></div></div>
+    <div class="grid grid--3">
+      {%- for h in highlights %}
+      <article class="card card--link">
+        <div class="meta"><span class="kind">{{ names[h.platform] or h.platform }}</span>{% if h.date %}<time datetime="{{ h.date }}">{{ h.date | date('short') }}</time>{% endif %}</div>
+        <h3 style="font-size: 1.2rem;"><a class="stretch" href="{{ h.url }}" target="_blank" rel="noopener">{{ h.title }}</a></h3>
+        {% if h.note %}<p>{{ h.note }}</p>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+{%- if medium.length %}
+<section class="section section--line" id="medium">
+  <div class="wrap">
+    <div class="section__head reveal"><div><p class="eyebrow">Medium</p><h2>Latest essays</h2></div></div>
+    <div class="grid grid--3">
+      {%- for m in medium %}
+      <article class="card card--link">
+        <div class="meta"><span class="kind">Medium</span><time datetime="{{ m.published }}">{{ m.published | date('short') }}</time></div>
+        <h3 style="font-size: 1.2rem;"><a class="stretch" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.title }}</a></h3>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+{%- if github.length %}
+<section class="section" id="code">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div><p class="eyebrow">GitHub · updated daily</p><h2>Open labs and code</h2></div>
+      <a class="link-arrow" href="{{ site.social.github }}" target="_blank" rel="noopener">All repositories {{ icon("arrow") }}</a>
+    </div>
+    <div class="grid grid--3">
+      {%- for repo in github %}
+      <article class="card card--link">
+        <div class="meta">{% if repo.language %}<span class="kind">{{ repo.language }}</span>{% endif %}<time datetime="{{ repo.pushed }}" data-relative>{{ repo.pushed | date('short') }}</time>{% if repo.stars %}<span>★ {{ repo.stars }}</span>{% endif %}</div>
+        <h3 style="font: 500 1.02rem/1.4 var(--mono); letter-spacing: 0;"><a class="stretch" href="{{ repo.url }}" target="_blank" rel="noopener">{{ repo.name }}</a></h3>
+        <p>{{ repo.description | truncate(150) }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+{{ cta(site, "Want me on your channel or stage?", "I am glad to join podcasts, panels and guest sessions on HPC, Linux, research computing and careers.") }}
