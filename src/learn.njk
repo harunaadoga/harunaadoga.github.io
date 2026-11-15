@@ -1,0 +1,64 @@
+---
+layout: layouts/base.njk
+title: Free courses
+description: Free, open-source Linux courses by Dr Haruna Adoga. RHCSA EX200 exam labs and a Linux server hardening series, with videos, for learners anywhere in the world.
+permalink: /learn/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/courses.njk" import courseCards %}
+{% from "partials/cards.njk" import videoCard %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Free courses</p>
+    <h1>Technical skills should be open to everyone.</h1>
+    <p class="lede">Where you live or what you can pay should not decide whether you can learn to run serious infrastructure. So I publish what I teach: complete, hands-on courses on GitHub, with a video for every step on YouTube. They are free, and they will stay free.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    {{ courseCards(rhcsa, hardening) }}
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head reveal"><div><p class="eyebrow">How I teach</p><h2>Built for people who learn by doing.</h2></div></div>
+    <div class="grid grid--3">
+      <div class="card reveal"><div class="card__num">01</div><h3>Hands-on first</h3><p>Every topic is a task you carry out on your own machine. You try it before you see the answer.</p></div>
+      <div class="card reveal" style="--d: 70ms"><div class="card__num">02</div><h3>Free tools only</h3><p>Everything runs on Rocky Linux, AlmaLinux or a free RHEL developer subscription, on a laptop with virtual machines.</p></div>
+      <div class="card reveal" style="--d: 140ms"><div class="card__num">03</div><h3>Open to correction</h3><p>The material is open source. If something is wrong or could be better, anyone can raise an issue or send a fix.</p></div>
+    </div>
+  </div>
+</section>
+
+{%- if youtube.length %}
+<section class="section">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div><p class="eyebrow">Latest lessons</p><h2>New on YouTube</h2></div>
+      <a class="btn btn--primary" href="{{ site.social.youtube }}?sub_confirmation=1" target="_blank" rel="noopener">Subscribe {{ icon("ext") }}</a>
+    </div>
+    <div class="grid grid--3">
+      {%- for v in youtube | limit(3) %}
+      {{ videoCard(v) }}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="callout callout--accent cta reveal">
+      <div>
+        <h2>Teaching a class or a team?</h2>
+        <p>You are welcome to use these courses with your students or colleagues. If you would like a guest session or a tailored version, get in touch.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="/contact/?topic=Training">Get in touch {{ icon("arrow") }}</a>
+      </div>
+    </div>
+  </div>
+</section>

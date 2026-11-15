@@ -1,30 +1,68 @@
 {
   "stats": [
-    { "value": 15, "suffix": "+", "label": "years across systems, networks and research computing" },
-    { "value": 3, "suffix": "", "label": "peer-reviewed publications, including IEEE GLOBECOM" },
-    { "value": 10, "suffix": "+", "label": "years teaching systems and networking" },
-    { "value": 200, "suffix": "G", "label": "Ethernet fabrics specified for research clusters" }
+    {
+      "value": 15,
+      "suffix": "+",
+      "label": "years across systems, networks and research computing"
+    },
+    {
+      "value": 2,
+      "suffix": "",
+      "label": "free, open-source courses for engineers anywhere in the world"
+    },
+    {
+      "value": 10,
+      "suffix": "+",
+      "label": "years teaching systems and networking"
+    },
+    {
+      "value": 200,
+      "suffix": "G",
+      "label": "Ethernet fabrics specified for research clusters"
+    }
   ],
   "focus": [
     {
       "title": "HPC and research computing",
       "body": "Owning the full stack of a university research cluster: scheduling, parallel storage, GPU compute for AI workloads, and the datacentre underneath it.",
-      "tags": ["Slurm", "Lustre", "Ceph", "GPU compute", "GridPP"]
+      "tags": [
+        "Slurm",
+        "Lustre",
+        "Ceph",
+        "GPU compute",
+        "GridPP"
+      ]
     },
     {
       "title": "Infrastructure strategy",
       "body": "Technical roadmaps, capacity planning, procurement and vendor negotiation, so that research gets the infrastructure it needs and the money is well spent.",
-      "tags": ["Roadmaps", "Procurement", "Capacity planning", "Vendor partnerships"]
+      "tags": [
+        "Roadmaps",
+        "Procurement",
+        "Capacity planning",
+        "Vendor partnerships"
+      ]
     },
     {
       "title": "Networks and private cloud",
       "body": "High-speed datacentre fabrics and OpenStack private cloud, automated end to end and documented so other engineers can run it.",
-      "tags": ["OpenStack", "RoCE", "BGP", "Ansible", "Terraform"]
+      "tags": [
+        "OpenStack",
+        "RoCE",
+        "BGP",
+        "Ansible",
+        "Terraform"
+      ]
     },
     {
       "title": "Research and teaching",
-      "body": "A PhD on network function virtualisation at the edge, peer review for IEEE and MDPI, and more than a decade of teaching systems and networking.",
-      "tags": ["NFV", "Edge computing", "Peer review", "Teaching"]
+      "body": "A PhD in Computing Science, with research on software-defined edge infrastructure, peer review for IEEE and MDPI, and more than a decade of teaching systems and networking.",
+      "tags": [
+        "Software-defined edge",
+        "Peer review",
+        "Open courses",
+        "Teaching"
+      ]
     }
   ],
   "experience": [
@@ -79,9 +117,24 @@
     }
   ],
   "education": [
-    { "award": "PhD, Computing Science", "org": "University of Glasgow", "period": "2020 – 2024", "note": "Thesis: Leveraging NFV heterogeneity at the network edge" },
-    { "award": "MSc, Computing Science (Distinction)", "org": "University of Hertfordshire", "period": "2014 – 2016", "note": "" },
-    { "award": "BEng, Electrical and Electronics Engineering", "org": "University of Maiduguri", "period": "2004 – 2009", "note": "" }
+    {
+      "award": "PhD, Computing Science",
+      "org": "University of Glasgow",
+      "period": "2020 – 2024",
+      "note": "Thesis: Leveraging NFV heterogeneity at the network edge"
+    },
+    {
+      "award": "MSc, Computing Science (Distinction)",
+      "org": "University of Hertfordshire",
+      "period": "2014 – 2016",
+      "note": ""
+    },
+    {
+      "award": "BEng, Electrical and Electronics Engineering",
+      "org": "University of Maiduguri",
+      "period": "2004 – 2009",
+      "note": ""
+    }
   ],
   "recognition": [
     {
@@ -97,18 +150,99 @@
     "RHCE (in progress)"
   ],
   "memberships": [
-    { "short": "IEEE", "name": "Institute of Electrical and Electronics Engineers", "since": "2020" },
-    { "short": "BCS", "name": "BCS, The Chartered Institute for IT", "since": "2022" },
-    { "short": "IET", "name": "Institution of Engineering and Technology", "since": "2022" },
-    { "short": "ISOC", "name": "Internet Society", "since": "2019" }
+    {
+      "short": "IEEE",
+      "name": "Institute of Electrical and Electronics Engineers",
+      "since": "2020"
+    },
+    {
+      "short": "BCS",
+      "name": "BCS, The Chartered Institute for IT",
+      "since": "2022"
+    },
+    {
+      "short": "IET",
+      "name": "Institution of Engineering and Technology",
+      "since": "2022"
+    },
+    {
+      "short": "ISOC",
+      "name": "Internet Society",
+      "since": "2019"
+    }
   ],
   "skills": [
-    { "group": "HPC and research computing", "items": ["Slurm", "HTCondor", "GridPP ARC-CE", "CVMFS", "perfSONAR", "GPU compute", "MPI and OpenMP environments"] },
-    { "group": "Cloud and virtualisation", "items": ["OpenStack (Kayobe)", "AWS", "KVM", "Kubernetes", "Docker", "Apptainer", "Proxmox"] },
-    { "group": "Networking", "items": ["RoCE", "200G Ethernet", "OmniPath", "BGP", "IPv6", "Cumulus Linux", "Cisco IOS"] },
-    { "group": "Storage", "items": ["Ceph", "Lustre", "NFS with Kerberos", "Samba", "Distributed storage design"] },
-    { "group": "Linux and security", "items": ["RHEL", "Rocky Linux", "Ubuntu", "Hardening", "SELinux", "CVE remediation", "AD, SSSD and LDAP"] },
-    { "group": "Automation and observability", "items": ["Ansible", "Terraform", "GitHub Actions", "NetBox", "Python", "Bash", "Prometheus", "Grafana"] }
+    {
+      "group": "HPC and research computing",
+      "items": [
+        "Slurm",
+        "HTCondor",
+        "GridPP ARC-CE",
+        "CVMFS",
+        "perfSONAR",
+        "GPU compute",
+        "MPI and OpenMP environments"
+      ]
+    },
+    {
+      "group": "Cloud and virtualisation",
+      "items": [
+        "OpenStack (Kayobe)",
+        "AWS",
+        "KVM",
+        "Kubernetes",
+        "Docker",
+        "Apptainer",
+        "Proxmox"
+      ]
+    },
+    {
+      "group": "Networking",
+      "items": [
+        "RoCE",
+        "200G Ethernet",
+        "OmniPath",
+        "BGP",
+        "IPv6",
+        "Cumulus Linux",
+        "Cisco IOS"
+      ]
+    },
+    {
+      "group": "Storage",
+      "items": [
+        "Ceph",
+        "Lustre",
+        "NFS with Kerberos",
+        "Samba",
+        "Distributed storage design"
+      ]
+    },
+    {
+      "group": "Linux and security",
+      "items": [
+        "RHEL",
+        "Rocky Linux",
+        "Ubuntu",
+        "Hardening",
+        "SELinux",
+        "CVE remediation",
+        "AD, SSSD and LDAP"
+      ]
+    },
+    {
+      "group": "Automation and observability",
+      "items": [
+        "Ansible",
+        "Terraform",
+        "GitHub Actions",
+        "NetBox",
+        "Python",
+        "Bash",
+        "Prometheus",
+        "Grafana"
+      ]
+    }
   ],
   "research": {
     "interests": [
@@ -166,22 +300,42 @@
     {
       "title": "Speaking",
       "body": "Conference talks, panels and guest lectures on HPC and AI infrastructure, research computing operations, network programmability and building engineering careers.",
-      "topics": ["Building and running a university HPC cluster", "Infrastructure for AI workloads", "From PhD to production engineering", "Linux as a career foundation"]
+      "topics": [
+        "Building and running a university HPC cluster",
+        "Infrastructure for AI workloads",
+        "From PhD to production engineering",
+        "Linux as a career foundation"
+      ]
     },
     {
       "title": "Advisory",
       "body": "Independent input for institutions and organisations planning research computing or infrastructure investment: architecture review, procurement strategy and operating model.",
-      "topics": ["HPC and storage architecture", "Datacentre networking", "OpenStack private cloud", "Capacity and lifecycle planning"]
+      "topics": [
+        "HPC and storage architecture",
+        "Datacentre networking",
+        "OpenStack private cloud",
+        "Capacity and lifecycle planning"
+      ]
     },
     {
       "title": "Research collaboration",
       "body": "Joint work, peer review and infrastructure partnership for projects in networking, edge computing and research computing.",
-      "topics": ["NFV and edge placement", "Programmable data planes", "Research infrastructure proposals", "Peer review"]
+      "topics": [
+        "NFV and edge placement",
+        "Programmable data planes",
+        "Research infrastructure proposals",
+        "Peer review"
+      ]
     },
     {
       "title": "Training and mentoring",
-      "body": "Practical teaching for teams and individuals, built on real systems and on a YouTube channel that helps people get certified and hired.",
-      "topics": ["Linux and RHCSA", "Server hardening", "Automation with Ansible and Terraform", "Career mentoring"]
+      "body": "Practical teaching for teams and individuals, built on real systems and on free, open courses that help people anywhere get certified and hired.",
+      "topics": [
+        "Linux and RHCSA",
+        "Server hardening",
+        "Automation with Ansible and Terraform",
+        "Career mentoring"
+      ]
     }
   ]
 }

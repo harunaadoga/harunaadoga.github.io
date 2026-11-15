@@ -4,6 +4,7 @@ permalink: /
 ---
 {% from "partials/icons.njk" import icon, socials %}
 {% from "partials/cards.njk" import postRow, videoCard, cta %}
+{% from "partials/courses.njk" import courseCards %}
 
 <section class="hero">
   <canvas class="hero__canvas" data-topology aria-hidden="true"></canvas>
@@ -11,10 +12,10 @@ permalink: /
     <div>
       <p class="status"><span class="status__dot"></span>Research Platforms and AI Infrastructure</p>
       <h1>Infrastructure that lets <em>research</em> move faster.</h1>
-      <p class="lede">I'm Dr Haruna Adoga. I design, build and run research platforms and AI infrastructure, from the datacentre floor to the scheduler. I bring fifteen years of engineering and a PhD in Computing Science from the University of Glasgow to that work.</p>
+      <p class="lede">I'm Dr Haruna Adoga. I design, build and run research platforms and AI infrastructure, from the datacentre floor to the scheduler. I bring fifteen years of engineering and a PhD in Computing Science from the University of Glasgow to that work, and I teach what I know for free to engineers around the world.</p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="/about/">About my work {{ icon("arrow") }}</a>
-        <a class="btn btn--ghost" href="/writing/">Read the writing</a>
+        <a class="btn btn--ghost" href="/learn/">Free courses</a>
         <a class="btn btn--ghost" href="/contact/">Contact</a>
       </div>
       {{ socials(site) }}
@@ -44,18 +45,14 @@ permalink: /
 
 <section class="section" style="padding-bottom: 0;">
   <div class="wrap">
-    <div class="callout promo reveal">
+    <div class="section__head reveal">
       <div>
-        <p class="eyebrow">Free resource</p>
-        <h2>The complete RHCSA lab course, free.</h2>
-        <p>Hands-on practice for the Red Hat EX200 exam: tasks, solutions and a video for every objective, plus a full mock exam. Open source on GitHub.</p>
-        <ul class="chips promo__facts"><li class="chip">RHEL 9 and 10</li><li class="chip">Rocky Linux</li><li class="chip">AlmaLinux</li><li class="chip">11 objectives</li><li class="chip">21-task mock exam</li></ul>
+        <p class="eyebrow">Teaching in the open</p>
+        <h2>Free courses, for anyone, anywhere.</h2>
       </div>
-      <div class="cta__actions">
-        <a class="btn btn--primary" href="/rhcsa/">Start the labs {{ icon("arrow") }}</a>
-        <a class="btn btn--ghost" href="{{ rhcsa.repo }}" target="_blank" rel="noopener">{{ icon("github") }} GitHub</a>
-      </div>
+      <a class="link-arrow" href="/learn/">Why I teach for free {{ icon("arrow") }}</a>
     </div>
+    {{ courseCards(rhcsa, hardening) }}
   </div>
 </section>
 

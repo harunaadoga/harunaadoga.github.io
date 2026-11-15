@@ -6,7 +6,7 @@ topics: ["Linux", "Security", "How-to"]
 video: xPjogpvOukA
 ---
 
-SSH is the front door of almost every Linux server. This checklist is the written companion to the SSH episode of my [Linux Server Hardening series](https://github.com/harunaadoga/linux-server-hardening). It targets RHEL, Rocky Linux and AlmaLinux 9 and later.
+SSH is the front door of almost every Linux server. This checklist is the written companion to the SSH episode of my [Linux Server Hardening series](/hardening/). It targets RHEL, Rocky Linux and AlmaLinux 9 and later.
 
 ## Before you start
 

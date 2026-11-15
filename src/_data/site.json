@@ -34,9 +34,13 @@
       "url": "/writing/"
     },
     {
-      "label": "Free RHCSA labs",
-      "url": "/rhcsa/",
-      "feature": true
+      "label": "Free courses",
+      "url": "/learn/",
+      "feature": true,
+      "also": [
+        "/rhcsa/",
+        "/hardening/"
+      ]
     },
     {
       "label": "Media",

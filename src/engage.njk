@@ -23,7 +23,7 @@ permalink: /engage/
       <h2 style="font-size: 1.9rem;">{{ e.title }}</h2>
       <p>{{ e.body }}</p>
       <ul class="chips" style="margin-bottom: 22px;">{% for t in e.topics %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
-      <p style="margin-top: auto;">{% if e.title == "Training and mentoring" %}<a class="link-arrow" href="/rhcsa/" style="margin-right: 22px;">Free RHCSA labs {{ icon("arrow") }}</a>{% endif %}<a class="link-arrow" href="/contact/?topic={{ e.title | urlencode }}">Enquire about {{ e.title | lower }} {{ icon("arrow") }}</a></p>
+      <p style="margin-top: auto;">{% if e.title == "Training and mentoring" %}<a class="link-arrow" href="/learn/" style="margin-right: 22px;">Free courses {{ icon("arrow") }}</a>{% endif %}<a class="link-arrow" href="/contact/?topic={{ e.title | urlencode }}">Enquire about {{ e.title | lower }} {{ icon("arrow") }}</a></p>
     </article>
     {%- endfor %}
   </div>
@@ -36,9 +36,9 @@ permalink: /engage/
       <h2>Speaker details</h2>
       <p>Feel free to use this short biography in programmes and introductions.</p>
       <div class="callout" id="bio">
-        <p style="margin: 0;">Dr Haruna Adoga works on research platforms and AI infrastructure, setting technical strategy for large-scale research computing. He holds a PhD in Computing Science from the University of Glasgow, has published at IEEE GLOBECOM and IEEE NetSoft, and has fifteen years of experience across Linux systems, networking and cloud. He teaches practical infrastructure skills on YouTube.</p>
+        <p style="margin: 0;">Dr Haruna Adoga works on research platforms and AI infrastructure, setting technical strategy for large-scale research computing. He holds a PhD in Computing Science from the University of Glasgow, has published at IEEE GLOBECOM and IEEE NetSoft, and has fifteen years of experience across Linux systems, networking and cloud. He publishes free, open-source courses on Linux and teaches practical infrastructure skills to a global audience on YouTube.</p>
       </div>
-      <p style="margin-top: 16px;"><button class="btn btn--ghost" type="button" data-copy="Dr Haruna Adoga works on research platforms and AI infrastructure, setting technical strategy for large-scale research computing. He holds a PhD in Computing Science from the University of Glasgow, has published at IEEE GLOBECOM and IEEE NetSoft, and has fifteen years of experience across Linux systems, networking and cloud. He teaches practical infrastructure skills on YouTube." data-copy-msg="Biography copied">Copy biography</button></p>
+      <p style="margin-top: 16px;"><button class="btn btn--ghost" type="button" data-copy="Dr Haruna Adoga works on research platforms and AI infrastructure, setting technical strategy for large-scale research computing. He holds a PhD in Computing Science from the University of Glasgow, has published at IEEE GLOBECOM and IEEE NetSoft, and has fifteen years of experience across Linux systems, networking and cloud. He publishes free, open-source courses on Linux and teaches practical infrastructure skills to a global audience on YouTube." data-copy-msg="Biography copied">Copy biography</button></p>
     </div>
     <div class="reveal" style="--d: 120ms">
       <p class="eyebrow">Good to know</p>

@@ -1,0 +1,104 @@
+---
+layout: layouts/base.njk
+title: Linux server hardening series
+description: A free, step-by-step Linux server hardening series following the CIS Benchmark, for RHEL, Rocky Linux and AlmaLinux 9 and 10. A video and a read-only check script for every episode.
+permalink: /hardening/
+---
+{% from "partials/icons.njk" import icon %}
+{% set base = hardening.repo + "/blob/" + hardening.branch %}
+
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Linux Server Hardening",
+  "description": description,
+  "url": "/hardening/" | absolute(site.url),
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "provider": { "@type": "Person", "name": "Haruna Adoga", "url": site.url },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP", "category": "Free" }
+} | json | safe }}
+</script>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="/learn/" style="text-decoration: none;">Free courses</a> · RHEL 9 and 10</p>
+    <h1>Harden a Linux server, one step at a time.</h1>
+    <p class="lede">A free series that takes a fresh server and secures it in order, following the CIS Benchmark. Each episode has a video, written steps to follow on your own machine, and a script that checks your work.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="{{ hardening.repo }}" target="_blank" rel="noopener">{{ icon("github") }} Open the series on GitHub</a>
+      <a class="btn btn--ghost" href="https://www.youtube.com/watch?v={{ hardening.episodes[0].video }}" target="_blank" rel="noopener">{{ icon("youtube") }} Watch episode 1</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat reveal"><div class="stat__value">{{ hardening.episodes.length }}</div><p class="stat__label">episodes so far, with more added as they are published</p></div>
+    <div class="stat reveal" style="--d: 80ms"><div class="stat__value">CIS</div><p class="stat__label">settings follow the CIS Benchmark for RHEL</p></div>
+    <div class="stat reveal" style="--d: 160ms"><div class="stat__value">9 + 10</div><p class="stat__label">written for RHEL, Rocky Linux and AlmaLinux</p></div>
+    <div class="stat reveal" style="--d: 240ms"><div class="stat__value">£0</div><p class="stat__label">free and open source under GPL-3.0</p></div>
+  </div>
+</div>
+
+<section class="section section--tint" id="episodes" style="margin-top: clamp(64px, 9vw, 120px);">
+  <div class="wrap">
+    <div class="section__head reveal"><div><p class="eyebrow">The series</p><h2>Episodes</h2></div><p class="muted">Each episode builds on the one before it.</p></div>
+    <ol class="objectives">
+      {%- for e in hardening.episodes %}
+      <li class="objective reveal">
+        <span class="objective__n">{{ e.n }}</span>
+        <div class="objective__title"><h3>{{ e.title }}</h3></div>
+        <ul class="chips">
+          <li><a class="chip" href="{{ base }}/{{ e.slug }}/README.md" target="_blank" rel="noopener">Steps</a></li>
+          <li><a class="chip" href="{{ base }}/{{ e.slug }}/check.sh" target="_blank" rel="noopener">Check script</a></li>
+          <li><a class="chip" href="https://www.youtube.com/watch?v={{ e.video }}" target="_blank" rel="noopener">▶ Video</a></li>
+        </ul>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px); align-items: start;">
+    <div class="reveal">
+      <p class="eyebrow">How to use it</p>
+      <h2>Watch, apply, check.</h2>
+      <ol class="steps">
+        <li><strong>Watch the episode.</strong></li>
+        <li><strong>Follow the steps</strong> in its folder on your own virtual machine.</li>
+        <li><strong>Run its check script</strong> to confirm the changes are in place. The script only reads your system and changes nothing.</li>
+      </ol>
+      <div class="prose" style="margin-top: 24px;"><pre><code>curl -O https://raw.githubusercontent.com/harunaadoga/linux-server-hardening/main/01-attack-surface/check.sh
+sudo bash check.sh</code></pre></div>
+    </div>
+    <div class="reveal" style="--d: 120ms">
+      <div class="callout">
+        <p class="eyebrow" style="color: var(--gold);">Before you start</p>
+        <p style="margin: 0;"><strong>Test on a virtual machine first, and take a snapshot before each episode.</strong> Some of these changes can lock you out of a server if you get them wrong. Keep a console or your current SSH session open until you have confirmed you can still log in.</p>
+      </div>
+      <div class="callout" style="margin-top: 20px;">
+        <p class="eyebrow">Debian and Ubuntu</p>
+        <p style="margin: 0;">The ideas are the same, but some tools differ: <code>ufw</code> instead of <code>firewalld</code>, <code>apt</code> instead of <code>dnf</code>, no <code>authselect</code> or system-wide crypto policies, and SSH logs in <code>/var/log/auth.log</code>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="callout callout--accent cta reveal">
+      <div>
+        <h2>Finding it useful?</h2>
+        <p>Star the repository so other engineers can find it, and subscribe to catch new episodes.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="{{ hardening.repo }}" target="_blank" rel="noopener">★ Star on GitHub</a>
+        <a class="btn btn--ghost" href="{{ site.social.youtube }}?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>
+      </div>
+    </div>
+    <p class="muted" style="font-size: 0.84rem; margin-top: 28px; max-width: 90ch;">This is an independent project, not affiliated with CIS or Red Hat. Review every change before you apply it to a production server.</p>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+{% from "partials/icons.njk" import icon %}
+{%- macro courseCards(rhcsa, hardening) -%}
+<div class="grid grid--2">
+  <article class="card card--link course reveal">
+    <div class="meta"><span class="kind">Certification</span><span>RHEL 9 and 10</span></div>
+    <h3><a class="stretch" href="/rhcsa/">RHCSA EX200 exam labs</a></h3>
+    <p>A complete practice course for the Red Hat Certified System Administrator exam: tasks, solutions and a video for every objective, plus a full mock exam.</p>
+    <ul class="chips"><li class="chip">{{ rhcsa.objectives.length }} objectives</li><li class="chip">21-task mock exam</li><li class="chip">Video walkthroughs</li></ul>
+    <span class="link-arrow course__go">Start the labs {{ icon("arrow") }}</span>
+  </article>
+  <article class="card card--link course reveal" style="--d: 80ms">
+    <div class="meta"><span class="kind">Security</span><span>RHEL 9 and 10</span></div>
+    <h3><a class="stretch" href="/hardening/">Linux server hardening</a></h3>
+    <p>Secure a server step by step following the CIS Benchmark. Every episode has a video, written steps and a script that checks your work.</p>
+    <ul class="chips"><li class="chip">{{ hardening.episodes.length }} episodes</li><li class="chip">CIS Benchmark</li><li class="chip">Read-only check scripts</li></ul>
+    <span class="link-arrow course__go">Start the series {{ icon("arrow") }}</span>
+  </article>
+</div>
+{%- endmacro -%}
