@@ -1,0 +1,20 @@
+{
+  "repo": "https://github.com/harunaadoga/rhcsa-ex200-exam-labs",
+  "branch": "main",
+  "playlist": "https://www.youtube.com/playlist?list=PLiI_-JOspy6FuSPXSipE0xE4oC2XXYyuI",
+  "playlistId": "PLiI_-JOspy6FuSPXSipE0xE4oC2XXYyuI",
+  "objectivesUrl": "https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam",
+  "objectives": [
+    { "n": "01", "title": "Understand and use essential tools", "slug": "01-essential-tools", "video": "Nf5Q1kMw6cM" },
+    { "n": "02", "title": "Create simple shell scripts", "slug": "02-shell-scripts", "video": "EzkUlseWso4" },
+    { "n": "03", "title": "Operate running systems", "slug": "03-operate-running-systems", "video": "aeDBzawCJiI" },
+    { "n": "04", "title": "Configure local storage", "slug": "04-local-storage", "video": "5jbNvO2RR1U" },
+    { "n": "05", "title": "Create and configure file systems", "slug": "05-file-systems", "video": "SCwQ7XLsyVo" },
+    { "n": "06", "title": "Deploy, configure and maintain systems", "slug": "06-deploy-maintain", "video": "Lb70UqXPmJs" },
+    { "n": "07", "title": "Manage basic networking", "slug": "07-networking", "video": "49mL0AZnpxM" },
+    { "n": "08", "title": "Manage users and groups", "slug": "08-users-groups", "video": "VzyppUlTXFs" },
+    { "n": "09", "title": "Manage security", "slug": "09-security", "video": "Ks82UfTHEw8" },
+    { "n": "10", "title": "Manage containers", "slug": "10-containers", "video": "iY5pFQPzZQg", "only": "RHEL 9" },
+    { "n": "11", "title": "Manage software with Flatpak", "slug": "11-flatpak", "video": "uQLkdbPYxcY", "only": "RHEL 10" }
+  ]
+}

@@ -10,7 +10,7 @@
     <nav class="nav" id="site-nav" aria-label="Primary">
       <ul>
         {%- for item in site.nav %}
-        <li><a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        <li><a href="{{ item.url }}"{% if item.feature %} class="nav__feature"{% endif %}{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
         {%- endfor %}
       </ul>
     </nav>

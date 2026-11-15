@@ -23,7 +23,7 @@ permalink: /engage/
       <h2 style="font-size: 1.9rem;">{{ e.title }}</h2>
       <p>{{ e.body }}</p>
       <ul class="chips" style="margin-bottom: 22px;">{% for t in e.topics %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
-      <p style="margin-top: auto;"><a class="link-arrow" href="/contact/?topic={{ e.title | urlencode }}">Enquire about {{ e.title | lower }} {{ icon("arrow") }}</a></p>
+      <p style="margin-top: auto;">{% if e.title == "Training and mentoring" %}<a class="link-arrow" href="/rhcsa/" style="margin-right: 22px;">Free RHCSA labs {{ icon("arrow") }}</a>{% endif %}<a class="link-arrow" href="/contact/?topic={{ e.title | urlencode }}">Enquire about {{ e.title | lower }} {{ icon("arrow") }}</a></p>
     </article>
     {%- endfor %}
   </div>

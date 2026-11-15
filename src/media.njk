@@ -6,8 +6,8 @@ permalink: /media/
 ---
 {% from "partials/icons.njk" import icon %}
 {% from "partials/cards.njk" import videoCard, cta %}
-{% set names = { linkedin: "LinkedIn", youtube: "YouTube", github: "GitHub", x: "X", tiktok: "TikTok", medium: "Medium", scholar: "Google Scholar", orcid: "ORCID" } %}
-{% set blurbs = { linkedin: "Professional updates and commentary", youtube: "Tutorials, series and career advice", github: "Labs, automation and research code", x: "Short takes and threads", tiktok: "Quick tips in under a minute", medium: "Longer essays", scholar: "Publications and citations", orcid: "Verified research record" } %}
+{% set names = { linkedin: "LinkedIn", youtube: "YouTube", github: "GitHub", x: "X", tiktok: "TikTok", medium: "Medium" } %}
+{% set blurbs = { linkedin: "Professional updates and commentary", youtube: "Tutorials, series and career advice", github: "Labs, automation and research code", x: "Short takes and threads", tiktok: "Quick tips in under a minute", medium: "Longer essays" } %}
 
 <section class="page-head">
   <div class="wrap">
@@ -20,7 +20,7 @@ permalink: /media/
 <section class="section" style="padding-top: 0;">
   <div class="wrap">
     <div class="grid grid--4">
-      {%- for key in ["youtube", "linkedin", "github", "x", "tiktok", "medium", "scholar", "orcid"] %}
+      {%- for key in ["youtube", "linkedin", "github", "x", "tiktok", "medium"] %}
       {%- if site.social[key] %}
       <div class="card card--link channel">
         <span class="channel__icon">{{ icon(key) }}</span>
@@ -28,6 +28,22 @@ permalink: /media/
       </div>
       {%- endif %}
       {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="callout promo">
+      <div>
+        <p class="eyebrow">Featured · free course</p>
+        <h2>RHCSA EX200 exam labs</h2>
+        <p>Tasks, solutions and a video for every exam objective, plus a full mock exam. For RHEL, Rocky Linux and AlmaLinux 9 and 10.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="/rhcsa/">Start the labs {{ icon("arrow") }}</a>
+        <a class="btn btn--ghost" href="{{ rhcsa.playlist }}" target="_blank" rel="noopener">Playlist</a>
+      </div>
     </div>
   </div>
 </section>

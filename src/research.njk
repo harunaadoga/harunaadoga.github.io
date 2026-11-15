@@ -14,8 +14,8 @@ permalink: /research/
     <h1>Networks that adapt to the hardware they run on.</h1>
     <p class="lede">My research sits where networking meets systems: virtualised network functions, programmable data planes and the edge. I now apply the same thinking to the networks and platforms behind research computing.</p>
     <div class="hero__actions">
-      <a class="btn btn--primary" href="{{ site.social.scholar }}" target="_blank" rel="noopener">Google Scholar {{ icon("ext") }}</a>
-      <a class="btn btn--ghost" href="{{ site.social.orcid }}" target="_blank" rel="noopener">ORCID {{ icon("ext") }}</a>
+      <a class="btn btn--primary" href="{{ r.thesis.url }}" target="_blank" rel="noopener">Read the thesis {{ icon("ext") }}</a>
+      <a class="btn btn--ghost" href="#publications">Publications</a>
     </div>
   </div>
 </section>
@@ -38,7 +38,7 @@ permalink: /research/
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="publications">
   <div class="wrap">
     <div class="section__head reveal"><div><p class="eyebrow">Publications</p><h2>Peer-reviewed work</h2></div></div>
     {%- for p in r.publications %}
@@ -55,7 +55,6 @@ permalink: /research/
       </div>
     </article>
     {%- endfor %}
-    <p class="muted" style="margin-top: 24px;">Full author lists and citation counts are on <a href="{{ site.social.scholar }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
   </div>
 </section>
 

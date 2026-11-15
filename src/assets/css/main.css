@@ -157,7 +157,7 @@ button.chip { cursor: pointer; }
 .nav-toggle { display: none; }
 [data-theme="dark"] .i-moon, [data-theme="light"] .i-sun { display: none; }
 
-@media (max-width: 1020px) {
+@media (max-width: 1100px) {
   .nav-toggle { display: inline-grid; }
   .nav {
     position: absolute; inset: 72px 0 auto 0; background: var(--bg); border-bottom: 1px solid var(--line);
@@ -430,3 +430,22 @@ button.chip { cursor: pointer; }
 .video--feature > .video { height: 100%; }
 .video--feature .video__media { flex: 1 1 auto; aspect-ratio: auto; min-height: 240px; }
 .video--feature .video__media img { position: absolute; inset: 0; }
+
+/* ───────── RHCSA labs ───────── */
+.steps { margin: 0; padding-left: 1.3em; display: grid; gap: 14px; color: var(--ink-2); }
+.steps strong { color: var(--ink); }
+.steps code, .callout code { font: 400 0.88em var(--mono); padding: 2px 6px; border-radius: 6px; background: var(--surface-2); border: 1px solid var(--line); }
+.objectives { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.objective { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px 24px; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.objective__n { font: 500 1.5rem/1 var(--serif); color: var(--accent); }
+.objective__title { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.objective h3 { margin: 0; font-size: 1.25rem; }
+@media (max-width: 700px) { .objective { grid-template-columns: 40px minmax(0, 1fr); } .objective .chips { grid-column: 2; } }
+
+/* Promo banner */
+.promo { display: grid; grid-template-columns: minmax(0, 1.4fr) auto; gap: 24px 48px; align-items: center; }
+.promo h2 { margin: 0 0 10px; }
+.promo p { margin: 0; color: var(--ink-2); max-width: 60ch; }
+.promo__facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+@media (max-width: 860px) { .promo { grid-template-columns: 1fr; } }
+.nav a.nav__feature { color: var(--accent); }

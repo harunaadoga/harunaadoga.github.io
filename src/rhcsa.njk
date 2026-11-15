@@ -1,0 +1,165 @@
+---
+layout: layouts/base.njk
+title: Free RHCSA EX200 labs
+description: Free hands-on RHCSA EX200 practice labs for RHEL, Rocky Linux and AlmaLinux 9 and 10. Tasks, solutions, a video for every objective and a full mock exam.
+permalink: /rhcsa/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/cards.njk" import videoCard %}
+{% set base = rhcsa.repo + "/blob/" + rhcsa.branch %}
+
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "RHCSA EX200 Exam Labs",
+  "description": description,
+  "url": "/rhcsa/" | absolute(site.url),
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "provider": { "@type": "Person", "name": "Haruna Adoga", "url": site.url },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP", "category": "Free" }
+} | json | safe }}
+</script>
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Free resource · RHEL 9 and 10</p>
+    <h1>Pass the RHCSA with free, hands-on labs.</h1>
+    <p class="lede">A complete practice course for the Red Hat Certified System Administrator exam (EX200). Every official objective has tasks to attempt, worked solutions and a video walkthrough, and it ends with a full mock exam. It costs nothing.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="{{ rhcsa.repo }}" target="_blank" rel="noopener">{{ icon("github") }} Open the labs on GitHub</a>
+      <a class="btn btn--ghost" href="{{ rhcsa.playlist }}" target="_blank" rel="noopener">{{ icon("youtube") }} Watch the playlist</a>
+      <a class="btn btn--ghost" href="#objectives">See the objectives</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat reveal"><div class="stat__value">11</div><p class="stat__label">exam objectives, each with tasks, solutions and a video</p></div>
+    <div class="stat reveal" style="--d: 80ms"><div class="stat__value">21</div><p class="stat__label">mock exam tasks across two servers, in three hours</p></div>
+    <div class="stat reveal" style="--d: 160ms"><div class="stat__value">9 + 10</div><p class="stat__label">both current exam versions, on RHEL, Rocky Linux and AlmaLinux</p></div>
+    <div class="stat reveal" style="--d: 240ms"><div class="stat__value">£0</div><p class="stat__label">free and open source under GPL-3.0</p></div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px); align-items: start;">
+    <div class="reveal">
+      <p class="eyebrow">How to use it</p>
+      <h2>Five steps to exam day</h2>
+      <ol class="steps">
+        <li><strong>Build the lab.</strong> Two virtual machines, <code>node1</code> and <code>node2</code>, running RHEL, Rocky Linux or AlmaLinux. A third <code>repo</code> machine is needed for the mock exam. <a href="{{ base }}/mock-exam/setup.md" target="_blank" rel="noopener">Setup guide</a>.</li>
+        <li><strong>Work through the objectives in order.</strong></li>
+        <li><strong>Try every task before you open the solution.</strong> The exam is practical, so practice is what counts.</li>
+        <li><strong>Watch the matching video</strong> if you get stuck.</li>
+        <li><strong>Finish with the mock exam</strong> under timed conditions.</li>
+      </ol>
+    </div>
+    <div class="reveal" style="--d: 120ms">
+      <div class="callout">
+        <p class="eyebrow">Which Linux should I use?</p>
+        <p>The exam runs on RHEL. Rocky Linux and AlmaLinux are rebuilds of RHEL, so the same commands work on all three. Use the same major version as your exam.</p>
+        <dl class="deflist" style="grid-template-columns: 120px minmax(0, 1fr);">
+          <dt>RHEL</dt><dd>Free with a <a href="https://developers.redhat.com/register" target="_blank" rel="noopener">developer subscription</a>. Exactly what the exam uses.</dd>
+          <dt>Rocky Linux</dt><dd><a href="https://rockylinux.org/download" target="_blank" rel="noopener">Free</a>, no account needed.</dd>
+          <dt>AlmaLinux</dt><dd><a href="https://almalinux.org/get-almalinux/" target="_blank" rel="noopener">Free</a>, no account needed.</dd>
+        </dl>
+      </div>
+      <div class="callout" style="margin-top: 20px;">
+        <p class="eyebrow">Exam versions</p>
+        <dl class="deflist" style="grid-template-columns: 120px minmax(0, 1fr);">
+          <dt>RHEL 9</dt><dd>Adds the <em>Manage containers</em> objective (Podman).</dd>
+          <dt>RHEL 10</dt><dd>Adds <em>Manage software with Flatpak</em> instead.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="objectives">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div><p class="eyebrow">The course</p><h2>Every exam objective, covered.</h2></div>
+      <a class="link-arrow" href="{{ rhcsa.objectivesUrl }}" target="_blank" rel="noopener">Official Red Hat objectives {{ icon("arrow") }}</a>
+    </div>
+    <ol class="objectives">
+      {%- for o in rhcsa.objectives %}
+      <li class="objective reveal">
+        <span class="objective__n">{{ o.n }}</span>
+        <div class="objective__title">
+          <h3>{{ o.title }}</h3>
+          {%- if o.only %}<span class="chip is-active">{{ o.only }} exam only</span>{% endif %}
+        </div>
+        <ul class="chips">
+          <li><a class="chip" href="{{ base }}/exam_objectives/{{ o.slug }}/tasks.md" target="_blank" rel="noopener">Tasks</a></li>
+          <li><a class="chip" href="{{ base }}/solutions/{{ o.slug }}/tasks.md" target="_blank" rel="noopener">Solutions</a></li>
+          <li><a class="chip" href="https://www.youtube.com/watch?v={{ o.video }}&list={{ rhcsa.playlistId }}" target="_blank" rel="noopener">▶ Video</a></li>
+        </ul>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px); align-items: center;">
+    <div class="reveal">
+      <p class="eyebrow">The final test</p>
+      <h2>A full mock exam.</h2>
+      <p class="lede">Twenty-one tasks across two servers in three hours, covering the exam objectives. The last task has a RHEL 9 version (containers) and a RHEL 10 version (Flatpak). Take it once you have finished the labs.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ base }}/mock-exam/exam.md" target="_blank" rel="noopener">Start the mock exam {{ icon("arrow") }}</a>
+        <a class="btn btn--ghost" href="{{ base }}/mock-exam/setup.md" target="_blank" rel="noopener">Setup</a>
+        <a class="btn btn--ghost" href="{{ base }}/mock-exam/solutions.md" target="_blank" rel="noopener">Solutions</a>
+      </div>
+    </div>
+    <div class="reveal" style="--d: 120ms">
+      <article class="card video">
+        <button class="video__media" type="button" data-video="{{ rhcsa.objectives[0].video }}" aria-label="Play part 1 of the RHCSA labs series">
+          <img src="https://i.ytimg.com/vi/{{ rhcsa.objectives[0].video }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="video__play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5.500v13l11-6.500z"/></svg></span>
+        </button>
+        <div class="video__body">
+          <div class="meta"><span class="kind">Start here</span><span>Part 1 of 11</span></div>
+          <h3><a href="{{ rhcsa.playlist }}" target="_blank" rel="noopener">Understand and use essential tools</a></h3>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{%- set reading = [] %}
+{%- for m in medium %}{% if "RHCSA" in m.title %}{% set reading = (reading.push(m), reading) %}{% endif %}{% endfor %}
+{%- if reading.length %}
+<section class="section section--line">
+  <div class="wrap">
+    <div class="section__head reveal"><div><p class="eyebrow">Further reading</p><h2>Study guides and exam advice</h2></div></div>
+    <div class="grid grid--3">
+      {%- for m in reading | limit(3) %}
+      <article class="card card--link reveal">
+        <div class="meta"><span class="kind">Medium</span><time datetime="{{ m.published }}">{{ m.published | date('short') }}</time></div>
+        <h3 style="font-size: 1.2rem;"><a class="stretch" href="{{ m.url }}" target="_blank" rel="noopener">{{ m.title }}</a></h3>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section">
+  <div class="wrap">
+    <div class="callout callout--accent cta reveal">
+      <div>
+        <h2>Did the labs help?</h2>
+        <p>Star the repository and share it with someone who is studying. It helps other people find it. Corrections and better solutions are welcome too.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="{{ rhcsa.repo }}" target="_blank" rel="noopener">★ Star on GitHub</a>
+        <a class="btn btn--ghost" href="{{ site.social.youtube }}?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>
+      </div>
+    </div>
+    <p class="muted" style="font-size: 0.84rem; margin-top: 28px; max-width: 90ch;">This is an independent community project. It is not affiliated with, endorsed by or sponsored by Red Hat, Inc. All tasks are original practice material based on the public EX200 exam objectives and contain no real exam questions. Red Hat, Red Hat Enterprise Linux, RHEL and RHCSA are trademarks of Red Hat, Inc.</p>
+  </div>
+</section>
