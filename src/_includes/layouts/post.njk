@@ -10,7 +10,7 @@ layout: layouts/base.njk
 <article>
   <header class="article-head">
     <div class="wrap">
-      <p class="eyebrow"><a href="/writing/" style="text-decoration: none;">Writing</a>{% if draft %} · Draft{% endif %}</p>
+      <p class="eyebrow"><a href="/writing/" style="text-decoration: none;">Blog</a>{% if draft %} · Draft{% endif %}</p>
       <h1>{{ title }}</h1>
       {% if description %}<p class="lede">{{ description }}</p>{% endif %}
       <div class="meta" style="margin-top: 24px;">
@@ -44,7 +44,7 @@ layout: layouts/base.njk
         </div>
         <div class="author">
           <img src="/assets/img/haruna-sm.webp" alt="" width="72" height="72">
-          <p><strong>Dr Haruna Adoga</strong> works on research platforms and AI infrastructure and holds a PhD in Computing Science from the University of Glasgow. <a href="/contact/">Get in touch</a> or <a href="/feed.xml">subscribe via RSS</a>.</p>
+          <p><strong>Haruna Umar Adoga, PhD</strong> is an HPC infrastructure engineer and holds a PhD in Computing Science from the University of Glasgow. <a href="/contact/">Get in touch</a> or <a href="/feed.xml">subscribe via RSS</a>.</p>
         </div>
         <nav class="pager" aria-label="More posts">
           {%- if prev %}<a class="prev" href="{{ prev.url }}"><small>Older</small>{{ prev.data.title }}</a>{% endif %}

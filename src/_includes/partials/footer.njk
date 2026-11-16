@@ -3,7 +3,7 @@
   <div class="wrap site-footer__grid">
     <div>
       <p class="site-footer__name">{{ site.name }}</p>
-      <p class="muted">Research platforms and AI infrastructure. PhD, University of Glasgow.</p>
+      <p class="muted">HPC infrastructure engineer and computing scientist. PhD, University of Glasgow.</p>
       {{ socials(site) }}
     </div>
     <nav aria-label="Footer">
@@ -15,17 +15,18 @@
       </ul>
     </nav>
     <div>
-      <p class="eyebrow">Stay in touch</p>
+      <p class="eyebrow">More</p>
       <ul class="plain">
         <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        <li><a href="/learn/">Free courses</a></li>
+        {%- for item in site.footerNav %}
+        <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+        {%- endfor %}
         <li><a href="/feed.xml">RSS feed</a></li>
-        <li><a href="/privacy/">Privacy</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__base">
-    <span>&copy; {% year %} Haruna Adoga. Views are my own and not those of my employer.</span>
+    <span>&copy; {% year %} Haruna Umar Adoga. Views are my own and not those of my employer.</span>
     <a href="#main">Back to top</a>
   </div>
 </footer>

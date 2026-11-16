@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: Professional Experience
+description: Professional experience of Haruna Umar Adoga, PhD. HPC infrastructure, research computing, Linux systems engineering, private cloud and datacentre networking roles since 2010.
+permalink: /experience/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/cards.njk" import cta %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Professional experience</p>
+    <h1>Fifteen years of building and running infrastructure.</h1>
+    <p class="lede">From Cisco networks and cloud consulting, through university systems and a doctorate, to technical leadership of HPC infrastructure for research.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/cv/">View CV {{ icon("arrow") }}</a>
+      <a class="btn btn--ghost" href="/portfolio/">Engineering portfolio</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line" style="padding-top: 24px;">
+  <div class="wrap">
+    <ol class="timeline">
+      {%- for job in profile.experience %}
+      <li class="timeline__item role reveal">
+        <div class="timeline__period">{{ job.period }}{% if job.place %}<br>{{ job.place }}{% endif %}</div>
+        <div>
+          <h2 class="role__title">{{ job.role }}</h2>
+          <div class="timeline__org">{{ job.org }}</div>
+          <p class="role__summary">{{ job.summary }}</p>
+          <h3 class="label">Responsibilities and contributions</h3>
+          <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+          {%- if job.environment %}
+          <h3 class="label">Technical environment</h3>
+          <ul class="chips">{% for t in job.environment %}<li class="chip">{{ t }}</li>{% endfor %}</ul>
+          {%- endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px);">
+    <div class="reveal">
+      <p class="eyebrow">Recognition</p>
+      {%- for r in profile.recognition %}
+      <h2 style="font-size: 1.5rem;">{{ r.title }}</h2>
+      <p>{{ r.body }}</p>
+      {%- endfor %}
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Qualifications</p>
+      <h2 style="font-size: 1.5rem;">PhD, MSc, BEng and industry certifications</h2>
+      <p>Academic degrees and professional certifications are listed separately, with dates.</p>
+      <p><a class="link-arrow" href="/credentials/">Certifications and education {{ icon("arrow") }}</a></p>
+    </div>
+  </div>
+</section>
+
+{{ cta(site, "Hiring for a senior infrastructure role?", "I am open to conversations about senior engineering roles, research collaborations and professional engagements.") }}

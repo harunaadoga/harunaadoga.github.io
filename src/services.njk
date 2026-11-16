@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+title: Professional Services
+description: Consulting and training from Haruna Umar Adoga, PhD. HPC architecture, research computing infrastructure, Slurm, Ceph and Lustre storage, OpenStack, high-performance networking, infrastructure automation and Linux training.
+permalink: /services/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/cards.njk" import cta %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Professional services</p>
+    <h1>Consulting and training, from someone who runs the systems.</h1>
+    <p class="lede">I am available for independent engagements in the areas I work in every day. The advice comes from operating this infrastructure in production and from researching the networks underneath it.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/contact/">Discuss an engagement {{ icon("arrow") }}</a>
+      <a class="btn btn--ghost" href="/portfolio/">See related work</a>
+    </div>
+  </div>
+</section>
+
+{%- for g in services.groups %}
+<section class="section section--line" style="padding-block: clamp(40px, 6vw, 72px);">
+  <div class="wrap svc-group">
+    <h2 class="reveal">{{ g.title }}</h2>
+    <ul class="svc reveal">
+      {%- for s in g.items %}
+      <li><h3>{{ s.title }}</h3><p>{{ s.body }}</p></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endfor %}
+
+<section class="section section--tint">
+  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px);">
+    <div class="reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>Scoped, written down, and honest about fit.</h2>
+      <ol class="steps">
+        <li><strong>A first conversation.</strong> You describe the problem, the timeline and the constraints.</li>
+        <li><strong>A written scope.</strong> What I will look at, what you will receive, and what is out of scope.</li>
+        <li><strong>The work.</strong> Review, design input, hands-on help or teaching, in person in the UK or remote.</li>
+        <li><strong>A clear write-up.</strong> Findings and recommendations your team can act on without me.</li>
+      </ol>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Good to know</p>
+      <dl class="deflist" style="grid-template-columns: 130px minmax(0, 1fr);">
+        <dt>Format</dt><dd>In person in the UK, or remote worldwide.</dd>
+        <dt>Capacity</dt><dd>Engagements are independent of my university role and fit around it, so availability is limited.</dd>
+        <dt>Speaking</dt><dd>For talks, panels and guest lectures, see <a href="/engage/">speaking</a>.</dd>
+        <dt>Free material</dt><dd>My <a href="/learn/">Linux courses</a> are free and open to everyone.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+{{ cta(site, "Have a project in mind?", "Tell me what you are building, where it is stuck and what a good outcome looks like.") }}

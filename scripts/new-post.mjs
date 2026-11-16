@@ -23,7 +23,9 @@ await writeFile(
 title: ${JSON.stringify(title)}
 description: "One or two sentences shown in listings and search results."
 date: ${date}
-topics: ["Notes"]
+topics: ["Linux"]
+# Categories: Linux, HPC, OpenStack, Networking, Storage, Cloud Infrastructure,
+# Infrastructure Automation, Cybersecurity, Research Computing (or add your own)
 draft: true
 # video: YOUTUBE_VIDEO_ID   (optional: embeds a video at the top)
 ---

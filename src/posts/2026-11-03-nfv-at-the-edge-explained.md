@@ -2,7 +2,7 @@
 title: "My PhD in plain language: placing network functions at the edge"
 description: "What network function virtualisation is, why mixed hardware makes it hard, and what my doctoral research at Glasgow contributed."
 date: 2026-11-03
-topics: ["Research", "Networking"]
+topics: ["Networking", "Research Computing"]
 ---
 
 People often ask what my PhD was about. The title is *Leveraging NFV heterogeneity at the network edge*. Here is the version without the jargon.

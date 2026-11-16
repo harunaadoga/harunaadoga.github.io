@@ -2,7 +2,7 @@
 title: "SSH hardening on RHEL, Rocky and AlmaLinux: a working checklist"
 description: "Ten settings that close the most common SSH weaknesses on RHEL-family servers, with the commands to apply and verify each one safely."
 date: 2026-11-10
-topics: ["Linux", "Security", "How-to"]
+topics: ["Linux", "Cybersecurity"]
 video: xPjogpvOukA
 ---
 

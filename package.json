@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "eleventy --serve --port 8080",
     "build": "eleventy",
-    "new": "node scripts/new-post.mjs"
+    "new": "node scripts/new-post.mjs",
+    "cv": "node scripts/make-cv.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.8",

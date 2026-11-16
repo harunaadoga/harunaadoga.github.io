@@ -1,0 +1,29 @@
+{
+  "groups": [
+    {
+      "title": "HPC and research computing",
+      "items": [
+        { "title": "HPC architecture and consulting", "body": "Independent review and design input for clusters: compute, scheduling, storage, networking and the datacentre constraints that shape them." },
+        { "title": "Research computing infrastructure", "body": "Planning and operating shared platforms for researchers, including capacity planning, hardware lifecycle and procurement support." },
+        { "title": "Slurm deployment and optimisation", "body": "Scheduler design for multi-user research environments: partitions, accounting, fair-share and GPU scheduling." },
+        { "title": "Storage architecture", "body": "Ceph and Lustre design choices for research workloads, and how they fit the network and the budget." }
+      ]
+    },
+    {
+      "title": "Platforms and networks",
+      "items": [
+        { "title": "Linux systems engineering", "body": "RHEL-family builds, hardening, identity integration and day-two operations, handled as code." },
+        { "title": "OpenStack infrastructure", "body": "Private cloud design and deployment with Kayobe, including network architecture." },
+        { "title": "High-performance networking", "body": "Datacentre fabric design for HPC and AI workloads: high-speed Ethernet, RoCE, BGP and IPv6." },
+        { "title": "Infrastructure automation", "body": "Ansible, Terraform and Git-based CI/CD so that infrastructure is repeatable, reviewed and documented." }
+      ]
+    },
+    {
+      "title": "Training and advice",
+      "items": [
+        { "title": "Linux training and workshops", "body": "Hands-on teaching for teams, built on the same labs I publish openly: RHCSA preparation, server hardening and administration." },
+        { "title": "Technical consulting", "body": "A second opinion on an architecture, a procurement decision or an operating model, written up clearly." }
+      ]
+    }
+  ]
+}

@@ -4,13 +4,13 @@
       <span class="brand__mark" aria-hidden="true">HA</span>
       <span class="brand__text">
         <span class="brand__name">{{ site.name }}</span>
-        <span class="brand__role">Research platforms &amp; AI infrastructure</span>
+        <span class="brand__role">HPC infrastructure engineer</span>
       </span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Primary">
       <ul>
         {%- for item in site.nav %}
-        <li><a href="{{ item.url }}"{% if item.feature %} class="nav__feature"{% endif %}{% set here = page.url.startsWith(item.url) %}{% for u in item.also or [] %}{% if page.url.startsWith(u) %}{% set here = true %}{% endif %}{% endfor %}{% if here %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        <li><a href="{{ item.url }}"{% set here = page.url.startsWith(item.url) %}{% for u in item.also or [] %}{% if page.url.startsWith(u) %}{% set here = true %}{% endif %}{% endfor %}{% if here %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
         {%- endfor %}
       </ul>
     </nav>

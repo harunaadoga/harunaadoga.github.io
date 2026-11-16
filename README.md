@@ -1,6 +1,6 @@
 # harunaadoga.github.io
 
-Personal website of Dr Haruna Adoga. Built with [Eleventy](https://www.11ty.dev/) and deployed to GitHub Pages by GitHub Actions.
+Personal website of Haruna Umar Adoga, PhD: HPC infrastructure engineer and computing scientist. Built with [Eleventy](https://www.11ty.dev/) and deployed to GitHub Pages by GitHub Actions.
 
 ## Write a post
 
@@ -35,12 +35,55 @@ Then open http://localhost:8080. Drafts are visible locally and hidden on the li
 
 | What | File |
 | --- | --- |
-| Name, email, social links, feed settings | `src/_data/site.json` |
-| Career, education, publications, services | `src/_data/profile.json` |
+| Name, role line, email, social links, navigation, SEO keywords | `src/_data/site.json` |
+| Experience, education, certifications, skills, publications | `src/_data/profile.json` |
+| Engineering portfolio (eight categories, projects) | `src/_data/portfolio.json` |
+| Professional services | `src/_data/services.json` |
+| Free courses | `src/_data/rhcsa.json`, `src/_data/hardening.json` |
 | Hand-picked posts from LinkedIn, X, TikTok | `src/_data/highlights.json` |
 | Pages | `src/*.njk` |
-| Posts | `src/posts/*.md` |
+| Blog posts | `src/posts/*.md` |
 | Styles and scripts | `src/assets/` |
+| Downloadable CV, robots.txt | `src/static/` |
+
+## Pages
+
+| URL | Purpose |
+| --- | --- |
+| `/` | Landing page: name, role, expertise, selected projects |
+| `/about/` | Biography and technologies |
+| `/experience/` | Professional experience with technical environment per role |
+| `/portfolio/` | Engineering portfolio by category |
+| `/research/` | Thesis, publications, Google Scholar |
+| `/credentials/` | Academic qualifications, certifications, memberships |
+| `/learn/`, `/rhcsa/`, `/hardening/` | Linux education and free courses |
+| `/services/` | Consulting and training |
+| `/writing/` | Technical blog |
+| `/cv/` | Web CV and PDF download |
+| `/contact/` | Contact form and links |
+| `/media/`, `/engage/` | Videos and channels; speaking |
+
+## Portfolio projects
+
+Each project in `src/_data/portfolio.json` has a title, context, overview, problem, contribution, technologies, outcomes and links. Leave `problem` or `outcomes` empty if there is nothing verified to say; the page hides empty fields.
+
+A project can carry a `todo` list of details still to be supplied. These show on the page as a dashed "To complete before publishing" box while `showPlaceholders` is `true` in `src/_data/site.json`. Set it to `false` to hide every placeholder across the site. The same switch hides the "Date and status to confirm" badges on `/credentials/`.
+
+Set `"featured": true` on a project to list it on the home page.
+
+## CV
+
+`/cv/` is generated from `profile.json`, so it never drifts from the rest of the site. After changing your experience or skills, regenerate the PDF and commit it:
+
+```bash
+npm run cv
+```
+
+This needs Google Chrome or Chromium installed. The public CV deliberately leaves out phone number and postal address.
+
+## Blog categories
+
+Use these in a post's `topics` list so the filters stay tidy: Linux, HPC, OpenStack, Networking, Storage, Cloud Infrastructure, Infrastructure Automation, Cybersecurity, Research Computing.
 
 ### Social channels
 

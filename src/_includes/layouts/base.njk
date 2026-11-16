@@ -3,24 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- set pageTitle = (title + " · " + site.shortName) if title else (site.name + " · " + site.tagline) %}
+  {%- set pageTitle = (title + " · " + site.fullName) if title else (site.name + " · HPC Infrastructure Engineer, Research Computing, Linux") %}
   {%- set pageDesc = description or site.description %}
   {%- set canonical = page.url | absolute(site.url) %}
+  {%- set ogImage = '/assets/img/og.png' | absolute(site.url) %}
+  {%- set isPost = layout == 'layouts/post.njk' %}
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ pageDesc }}">
-  <meta name="author" content="{{ site.name }}">
+  <meta name="author" content="{{ site.fullName }}">
+  <meta name="keywords" content="{{ site.keywords | join(', ') }}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="{{ canonical }}">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#121314">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a1322">
 
   <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:type" content="{{ 'article' if layout == 'layouts/post.njk' else 'website' }}">
-  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:type" content="{{ 'article' if isPost else ('profile' if page.url == '/' else 'website') }}">
+  <meta property="og:title" content="{{ title or (site.name + ' · HPC Infrastructure Engineer') }}">
   <meta property="og:description" content="{{ pageDesc }}">
   <meta property="og:url" content="{{ canonical }}">
-  <meta property="og:image" content="{{ '/assets/img/og.png' | absolute(site.url) }}">
+  <meta property="og:image" content="{{ ogImage }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ site.name }}, {{ site.roleLine | join(', ') }}">
   <meta property="og:locale" content="en_GB">
+  {%- if isPost %}
+  <meta property="article:published_time" content="{{ page.date | date('iso') }}">
+  <meta property="article:author" content="{{ site.fullName }}">
+  {%- endif %}
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title or site.name }}">
+  <meta name="twitter:description" content="{{ pageDesc }}">
+  <meta name="twitter:image" content="{{ ogImage }}">
 
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/atom+xml" title="{{ site.shortName }} · Writing" href="/feed.xml">
@@ -38,28 +52,63 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css?v={{ build.time | slug }}">
 
   <script type="application/ld+json">
   {{ {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Haruna Adoga",
-    "honorificPrefix": "Dr",
-    "url": site.url,
-    "image": "/assets/img/haruna.webp" | absolute(site.url),
-    "jobTitle": "Research Platforms and AI Infrastructure",
-    "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "University of Glasgow" },
-      { "@type": "CollegeOrUniversity", "name": "University of Hertfordshire" },
-      { "@type": "CollegeOrUniversity", "name": "University of Maiduguri" }
-    ],
-    "knowsAbout": ["High-performance computing", "Research computing", "Linux", "OpenStack", "Datacentre networking", "Network function virtualisation", "Edge computing"],
-    "email": "mailto:" + site.email,
-    "sameAs": [site.social.linkedin, site.social.youtube, site.social.github, site.social.x, site.social.tiktok, site.social.medium]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": site.url + "/#person",
+        "name": site.fullName,
+        "alternateName": ["Haruna Adoga", "Haruna U. Adoga", "Dr Haruna Adoga"],
+        "honorificSuffix": "PhD",
+        "url": site.url,
+        "image": "/assets/img/haruna.webp" | absolute(site.url),
+        "jobTitle": "HPC Infrastructure Engineer",
+        "description": site.description,
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "University of Glasgow" },
+          { "@type": "CollegeOrUniversity", "name": "University of Hertfordshire" },
+          { "@type": "CollegeOrUniversity", "name": "University of Maiduguri" }
+        ],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "PhD in Computing Science", "recognizedBy": { "@type": "CollegeOrUniversity", "name": "University of Glasgow" } },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Red Hat Certified System Administrator (RHCSA)" }
+        ],
+        "knowsAbout": ["High-performance computing", "Research computing", "Linux systems engineering", "OpenStack", "Slurm", "Ceph", "Lustre", "Kubernetes", "Datacentre networking", "RDMA and RoCE", "Software-defined networking", "Network function virtualisation", "Infrastructure as code", "AI infrastructure"],
+        "email": "mailto:" + site.email,
+        "sameAs": [site.social.linkedin, site.social.github, site.social.youtube, site.social.scholar, site.social.x, site.social.tiktok, site.social.medium]
+      },
+      {
+        "@type": "WebSite",
+        "@id": site.url + "/#website",
+        "url": site.url,
+        "name": site.name,
+        "inLanguage": "en-GB",
+        "publisher": { "@id": site.url + "/#person" }
+      }
+    ]
   } | json | safe }}
   </script>
+  {%- if isPost %}
+  <script type="application/ld+json">
+  {{ {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": pageDesc,
+    "datePublished": page.date | date("iso"),
+    "dateModified": (updated or page.date) | date("iso"),
+    "mainEntityOfPage": canonical,
+    "image": ogImage,
+    "author": { "@id": site.url + "/#person", "@type": "Person", "name": site.fullName, "url": site.url },
+    "keywords": (topics or []) | join(", ")
+  } | json | safe }}
+  </script>
+  {%- endif %}
   {% block head %}{% endblock %}
 </head>
 <body class="{{ bodyClass }}">

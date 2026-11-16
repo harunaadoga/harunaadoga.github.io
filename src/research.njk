@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Research
-description: Doctoral thesis, peer-reviewed publications and research interests of Dr Haruna Adoga, covering network function virtualisation, edge computing and research computing infrastructure.
+description: Doctoral thesis, peer-reviewed publications and research interests of Haruna Umar Adoga, PhD, covering network function virtualisation, edge computing and research computing infrastructure.
 permalink: /research/
 ---
 {% from "partials/icons.njk" import icon %}
@@ -16,6 +16,7 @@ permalink: /research/
     <div class="hero__actions">
       <a class="btn btn--primary" href="{{ r.thesis.url }}" target="_blank" rel="noopener">Read the thesis {{ icon("ext") }}</a>
       <a class="btn btn--ghost" href="#publications">Publications</a>
+      <a class="btn btn--ghost" href="{{ site.social.scholar }}" target="_blank" rel="noopener">Google Scholar {{ icon("ext") }}</a>
     </div>
   </div>
 </section>
@@ -40,7 +41,7 @@ permalink: /research/
 
 <section class="section" id="publications">
   <div class="wrap">
-    <div class="section__head reveal"><div><p class="eyebrow">Publications</p><h2>Peer-reviewed work</h2></div></div>
+    <div class="section__head reveal"><div><p class="eyebrow">Publications</p><h2>Peer-reviewed work</h2></div><a class="link-arrow" href="{{ site.social.scholar }}" target="_blank" rel="noopener">Citations on Google Scholar {{ icon("ext") }}</a></div>
     {%- for p in r.publications %}
     <article class="pub reveal">
       <div class="pub__year">{{ p.year }}</div>

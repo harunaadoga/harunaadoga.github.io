@@ -24,7 +24,7 @@
   "focus": [
     {
       "title": "HPC and research computing",
-      "body": "Owning the full stack of a university research cluster: scheduling, parallel storage, GPU compute for AI workloads, and the datacentre underneath it.",
+      "body": "Full-stack ownership of a university research cluster: scheduling, parallel storage, GPU compute for AI workloads and the datacentre underneath it.",
       "tags": [
         "Slurm",
         "Lustre",
@@ -34,34 +34,36 @@
       ]
     },
     {
-      "title": "Infrastructure strategy",
-      "body": "Technical roadmaps, capacity planning, procurement and vendor negotiation, so that research gets the infrastructure it needs and the money is well spent.",
+      "title": "Linux systems engineering",
+      "body": "RHEL-family systems built, hardened and automated, with identity, storage and monitoring handled as code and documented for the next engineer.",
       "tags": [
-        "Roadmaps",
-        "Procurement",
-        "Capacity planning",
-        "Vendor partnerships"
+        "RHEL",
+        "Rocky Linux",
+        "SELinux",
+        "Hardening",
+        "SSSD / LDAP"
       ]
     },
     {
-      "title": "Networks and private cloud",
-      "body": "High-speed datacentre fabrics and OpenStack private cloud, automated end to end and documented so other engineers can run it.",
+      "title": "Cloud and virtualisation",
+      "body": "OpenStack private cloud deployed with Kayobe, alongside KVM, containers and Kubernetes, and earlier AWS work for consulting clients.",
       "tags": [
         "OpenStack",
-        "RoCE",
-        "BGP",
-        "Ansible",
-        "Terraform"
+        "Kayobe",
+        "KVM",
+        "Kubernetes",
+        "AWS"
       ]
     },
     {
-      "title": "Research and teaching",
-      "body": "A PhD in Computing Science, with research on software-defined edge infrastructure, peer review for IEEE and MDPI, and more than a decade of teaching systems and networking.",
+      "title": "High-performance networking",
+      "body": "Datacentre fabrics for HPC and AI workloads, from 200G Ethernet and RoCE to BGP and IPv6, grounded in doctoral research on SDN and NFV.",
       "tags": [
-        "Software-defined edge",
-        "Peer review",
-        "Open courses",
-        "Teaching"
+        "200G Ethernet",
+        "RoCE",
+        "BGP",
+        "SDN",
+        "NFV"
       ]
     }
   ],
@@ -79,7 +81,20 @@
         "Runs Slurm scheduling for multi-user research environments, with Ceph and Lustre storage behind it, and automates services with Ansible, Terraform and Git-based CI/CD.",
         "GridPP site security contact and Registration Authority operator; represents Sussex in GridPP operations and UK research network engineering forums.",
         "Leads vendor negotiations for AI and HPC procurement, provides cover for senior management, and supports and mentors colleagues and researchers new to HPC."
-      ]
+      ],
+      "environment": [
+        "Slurm",
+        "Ceph",
+        "Lustre",
+        "OpenStack (Kayobe)",
+        "GPU compute",
+        "200G Ethernet / RoCE",
+        "GridPP (ARC-CE, HTCondor, CVMFS)",
+        "Ansible",
+        "Terraform",
+        "Git-based CI/CD"
+      ],
+      "headline": "Technical lead for university HPC infrastructure"
     },
     {
       "role": "Research Computing Lab Assistant and Tutor",
@@ -90,6 +105,12 @@
       "points": [
         "Administered the systems research lab and its HPC network infrastructure, with specialist Linux and networking support for research staff and students.",
         "Taught MSc-level Python programming, networking and operating systems."
+      ],
+      "environment": [
+        "Linux",
+        "HPC networking",
+        "Python",
+        "Research lab systems"
       ]
     },
     {
@@ -101,6 +122,12 @@
       "points": [
         "Designed and taught undergraduate and postgraduate curriculum in Linux systems administration, DevOps, distributed systems and infrastructure automation.",
         "Managed the university's Linux server fleet using infrastructure-as-code."
+      ],
+      "environment": [
+        "Linux server administration",
+        "Infrastructure as code",
+        "DevOps tooling",
+        "Distributed systems teaching"
       ]
     },
     {
@@ -113,6 +140,13 @@
         "Designed and deployed cloud infrastructure with Terraform and Ansible across AWS and on-premises environments, and advised on cloud migration.",
         "Delivered multi-site LAN/WAN and internet connectivity for government offices using Cisco routing and switching.",
         "Taught CCNA and CCNP certification courses with hands-on curriculum."
+      ],
+      "environment": [
+        "Terraform",
+        "Ansible",
+        "AWS",
+        "Cisco routing and switching",
+        "LAN/WAN"
       ]
     }
   ],
@@ -143,11 +177,30 @@
     }
   ],
   "certifications": [
-    "Red Hat Certified System Administrator (RHCSA), 2025",
-    "AWS Certified Cloud Practitioner",
-    "ITIL v3",
-    "Cisco CCNA",
-    "RHCE (in progress)"
+    {
+      "name": "Red Hat Certified System Administrator (RHCSA)",
+      "issuer": "Red Hat",
+      "year": "2025",
+      "status": "Current"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "year": "",
+      "status": ""
+    },
+    {
+      "name": "Cisco Certified Network Associate (CCNA)",
+      "issuer": "Cisco",
+      "year": "",
+      "status": ""
+    },
+    {
+      "name": "ITIL v3",
+      "issuer": "ITIL",
+      "year": "",
+      "status": ""
+    }
   ],
   "memberships": [
     {
@@ -337,5 +390,8 @@
         "Career mentoring"
       ]
     }
+  ],
+  "inProgress": [
+    "Red Hat Certified Engineer (RHCE)"
   ]
 }

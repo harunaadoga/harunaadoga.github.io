@@ -1,0 +1,100 @@
+---
+layout: layouts/base.njk
+title: Curriculum Vitae
+description: Curriculum vitae of Haruna Umar Adoga, PhD. HPC infrastructure engineer and computing scientist. View online, print, or download as PDF.
+permalink: /cv/
+bodyClass: cv-page
+---
+{% from "partials/icons.njk" import icon %}
+<section class="page-head cv-tools">
+  <div class="wrap">
+    <p class="eyebrow">Curriculum vitae</p>
+    <h1>CV</h1>
+    <p class="lede">A public version of my CV. Personal contact details are left out; please <a href="/contact/">get in touch</a> if you need the full document.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="{{ site.cvFile }}" download>Download PDF {{ icon("arrow") }}</a>
+      <button class="btn btn--ghost" type="button" onclick="window.print()">Print this page</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <article class="cv">
+      <header class="cv__head">
+        <h2 class="cv__name">{{ site.name }}</h2>
+        <p class="cv__role">{{ site.roleLine | join(" · ") }}</p>
+        <p class="cv__contact">{{ site.location }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a> · <a href="{{ site.url }}">{{ site.url | replace("https://", "") }}</a> · <a href="{{ site.social.linkedin }}">LinkedIn</a> · <a href="{{ site.social.github }}">GitHub</a></p>
+      </header>
+
+      <section>
+        <h3>Profile</h3>
+        <p>Computing scientist and infrastructure engineer with fifteen years across Linux systems, networking, cloud and research computing. Technical lead for university HPC infrastructure, with ownership of the stack from datacentre and network fabric to scheduler and storage. PhD in Computing Science from the University of Glasgow, with peer-reviewed research on network function virtualisation at the edge.</p>
+      </section>
+
+      <section>
+        <h3>Experience</h3>
+        {%- for job in profile.experience %}
+        <div class="cv__item">
+          <div class="cv__row"><strong>{{ job.role }}</strong><span>{{ job.period }}</span></div>
+          <div class="cv__org">{{ job.org }}{% if job.place %}, {{ job.place }}{% endif %}</div>
+          <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
+        </div>
+        {%- endfor %}
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        {%- for e in profile.education %}
+        <div class="cv__item">
+          <div class="cv__row"><strong>{{ e.award }}</strong><span>{{ e.period }}</span></div>
+          <div class="cv__org">{{ e.org }}{% if e.note %}. {{ e.note }}{% endif %}</div>
+        </div>
+        {%- endfor %}
+      </section>
+
+      <section>
+        <h3>Certifications</h3>
+        <ul>
+          {%- for c in profile.certifications %}<li>{{ c.name }}{% if c.year %}, {{ c.year }}{% endif %}</li>{% endfor %}
+          {%- for c in profile.inProgress %}<li>{{ c }} (in progress)</li>{% endfor %}
+        </ul>
+      </section>
+
+      <section>
+        <h3>Publications</h3>
+        <ul>
+          <li>{{ profile.research.thesis.title }}. PhD thesis, {{ profile.research.thesis.org }}, {{ profile.research.thesis.year }}. <a href="{{ profile.research.thesis.url }}">{{ profile.research.thesis.url | replace("https://", "") }}</a></li>
+          {%- for p in profile.research.publications %}
+          <li>{{ p.title }}. {{ p.venue }}, {{ p.year }}. <a href="https://doi.org/{{ p.doi }}">doi.org/{{ p.doi }}</a></li>
+          {%- endfor %}
+        </ul>
+      </section>
+
+      <section>
+        <h3>Technical skills</h3>
+        <dl class="cv__skills">
+          {%- for g in profile.skills %}<dt>{{ g.group }}</dt><dd>{{ g.items | join(", ") }}</dd>{% endfor %}
+        </dl>
+      </section>
+
+      <section>
+        <h3>Recognition and memberships</h3>
+        <ul>
+          {%- for r in profile.recognition %}<li>{{ r.title }}. {{ r.body }}</li>{% endfor %}
+          <li>Member: {% for m in profile.memberships %}{{ m.short }} (since {{ m.since }}){% if not loop.last %}, {% endif %}{% endfor %}</li>
+          <li>Peer reviewer for IEEE and MDPI venues</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Teaching and open source</h3>
+        <ul>
+          <li>RHCSA EX200 exam labs, free hands-on labs for RHEL 9 and 10: <a href="{{ rhcsa.repo }}">{{ rhcsa.repo | replace("https://", "") }}</a></li>
+          <li>Linux Server Hardening, a free video series and repository: <a href="{{ hardening.repo }}">{{ hardening.repo | replace("https://", "") }}</a></li>
+          <li>YouTube channel on Linux, security and infrastructure careers: <a href="{{ site.social.youtube }}">{{ site.social.youtube | replace("https://www.", "") }}</a></li>
+        </ul>
+      </section>
+    </article>
+  </div>
+</section>

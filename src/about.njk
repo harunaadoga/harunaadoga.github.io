@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: About
-description: Career, education and recognition of Dr Haruna Adoga, working in research platforms and AI infrastructure, and PhD graduate of the University of Glasgow.
+description: About Haruna Umar Adoga, PhD. HPC infrastructure engineer and computing scientist with a PhD from the University of Glasgow, working in research computing, Linux, cloud and networking.
 permalink: /about/
 ---
 {% from "partials/icons.njk" import icon %}
@@ -10,8 +10,8 @@ permalink: /about/
 <section class="page-head">
   <div class="wrap">
     <p class="eyebrow">About</p>
-    <h1>An engineer who did the research, and a researcher who runs production.</h1>
-    <p class="lede">I have spent fifteen years in Linux systems, networking, cloud and research computing. Today I work on research platforms and AI infrastructure: setting technical strategy, owning the infrastructure stack, driving procurement and working with technology partners and vendors.</p>
+    <h1>Computing scientist and infrastructure engineer.</h1>
+    <p class="lede">I have spent fifteen years in Linux systems, networking, cloud and research computing. Today I am the technical lead for a university's HPC infrastructure: setting technical strategy, owning the stack, driving procurement and working with technology partners and vendors.</p>
   </div>
 </section>
 
@@ -27,7 +27,7 @@ permalink: /about/
       <div class="callout">
         <p class="eyebrow">At a glance</p>
         <dl class="deflist" style="grid-template-columns: 130px minmax(0, 1fr);">
-          <dt>Now</dt><dd>Research Platforms and AI Infrastructure</dd>
+          <dt>Now</dt><dd>HPC Systems Engineer, University of Sussex</dd>
           <dt>Doctorate</dt><dd>PhD Computing Science, University of Glasgow (2024)</dd>
           <dt>Focus</dt><dd>HPC, research computing, datacentre networking, private cloud</dd>
           <dt>Based</dt><dd>{{ site.location }}</dd>
@@ -47,51 +47,11 @@ permalink: /about/
 
 <section class="section section--tint">
   <div class="wrap">
-    <div class="section__head reveal"><div><p class="eyebrow">Experience</p><h2>Career</h2></div></div>
-    <ol class="timeline">
-      {%- for job in profile.experience %}
-      <li class="timeline__item reveal">
-        <div class="timeline__period">{{ job.period }}</div>
-        <div>
-          <h3>{{ job.role }}</h3>
-          <div class="timeline__org">{{ job.org }}{% if job.place %} · {{ job.place }}{% endif %}</div>
-          <p>{{ job.summary }}</p>
-          <ul>{% for pt in job.points %}<li>{{ pt }}</li>{% endfor %}</ul>
-        </div>
-      </li>
-      {%- endfor %}
-    </ol>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap grid grid--2" style="gap: clamp(28px, 5vw, 72px);">
-    <div class="reveal">
-      <p class="eyebrow">Education</p>
-      <h2>Degrees</h2>
-      {%- for e in profile.education %}
-      <div class="pub" style="grid-template-columns: 1fr;">
-        <div>
-          <div class="meta">{{ e.period }}</div>
-          <h3>{{ e.award }}</h3>
-          <p>{{ e.org }}{% if e.note %}<br><span class="muted">{{ e.note }}</span>{% endif %}</p>
-        </div>
-      </div>
-      {%- endfor %}
-    </div>
-    <div class="reveal" style="--d: 120ms">
-      <p class="eyebrow">Credentials</p>
-      <h2>Certifications and memberships</h2>
-      <ul class="plain" style="border-top: 1px solid var(--line);">
-        {%- for c in profile.certifications %}
-        <li style="padding: 14px 0; border-bottom: 1px solid var(--line);">{{ c }}</li>
-        {%- endfor %}
-      </ul>
-      <ul class="plain" style="margin-top: 28px; display: grid; gap: 12px;">
-        {%- for m in profile.memberships %}
-        <li><strong>{{ m.short }}</strong> <span class="muted">· {{ m.name }}, member since {{ m.since }}</span></li>
-        {%- endfor %}
-      </ul>
+    <div class="section__head reveal"><div><p class="eyebrow">Background</p><h2>Where to go next</h2></div></div>
+    <div class="grid grid--3">
+      <article class="card card--link reveal"><h3><a class="stretch" href="/experience/">Professional experience</a></h3><p>Roles, responsibilities and technical environment since 2010.</p></article>
+      <article class="card card--link reveal"><h3><a class="stretch" href="/research/">Research and publications</a></h3><p>PhD thesis, peer-reviewed papers and research interests.</p></article>
+      <article class="card card--link reveal"><h3><a class="stretch" href="/credentials/">Certifications and education</a></h3><p>Degrees, professional certifications and memberships.</p></article>
     </div>
   </div>
 </section>

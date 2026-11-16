@@ -1,0 +1,253 @@
+{
+  "categories": [
+    {
+      "id": "hpc",
+      "title": "HPC Infrastructure",
+      "projects": [
+        {
+          "title": "Artemis Hybrid Research Cluster",
+          "context": "University of Sussex · 2023 – present",
+          "featured": true,
+          "overview": "A hybrid research cluster for the university, delivered end to end: requirements, procurement, physical installation and the move into production.",
+          "problem": "",
+          "contribution": [
+            "Core technical contributor across the whole delivery, from requirements and procurement to production.",
+            "Specified the switching fabric the cluster adopted.",
+            "Primary datacentre engineer for the build: rack design, power modelling and hardware lifecycle."
+          ],
+          "tech": ["Slurm", "Lustre", "Ceph", "GPU compute", "200G Ethernet", "RoCE"],
+          "outcomes": [
+            "The cluster is in production and serves multi-user research workloads.",
+            "The delivery team was shortlisted in the Sussex Awards 2025, Institutional Improvement and Transformation category."
+          ],
+          "links": [],
+          "diagram": true,
+          "todo": ["The research need the cluster was commissioned to meet", "Public-safe architecture diagram", "Any figures cleared for publication (scale, users, capacity)"]
+        }
+      ]
+    },
+    {
+      "id": "research-computing",
+      "title": "Research Computing",
+      "projects": [
+        {
+          "title": "GridPP site operations",
+          "context": "University of Sussex · 2023 – present",
+          "overview": "Running the university's site in GridPP, the UK computing grid for particle physics, and representing the site in GridPP operations.",
+          "problem": "Grid sites share compute with a national and international collaboration, so they have to meet common standards for security, identity and availability.",
+          "contribution": [
+            "Site security contact.",
+            "Registration Authority operator.",
+            "Represents the site in GridPP operations and UK research network engineering forums."
+          ],
+          "tech": ["ARC-CE", "HTCondor", "CVMFS", "perfSONAR"],
+          "outcomes": [],
+          "links": [{ "label": "GridPP", "url": "https://www.gridpp.ac.uk/" }],
+          "todo": ["Outcomes you are happy to state publicly"]
+        },
+        {
+          "title": "Systems research lab administration",
+          "context": "University of Glasgow · 2021 – 2023",
+          "overview": "Administration of the systems research computing lab and its HPC network infrastructure, alongside doctoral research.",
+          "problem": "Research staff and students needed dependable lab systems and specialist Linux and networking support for their experiments.",
+          "contribution": [
+            "Administered the lab and its HPC network infrastructure.",
+            "Provided specialist Linux and networking support to research staff and students."
+          ],
+          "tech": ["Linux", "HPC networking", "Python"],
+          "outcomes": [],
+          "links": [],
+          "todo": ["Outcomes or scale you are happy to state publicly"]
+        }
+      ]
+    },
+    {
+      "id": "linux",
+      "title": "Linux Systems Engineering",
+      "projects": [
+        {
+          "title": "Linux Server Hardening",
+          "context": "Open source · video series and repository",
+          "featured": true,
+          "overview": "Step-by-step server hardening that follows the CIS Benchmark: attack surface, user accounts, SSH, firewalld and more, for RHEL, Rocky Linux and AlmaLinux 9 and 10.",
+          "problem": "Hardening guidance is usually a long checklist with no way to see what a change did. Engineers need to understand each control and verify it safely.",
+          "contribution": [
+            "Wrote and recorded every episode.",
+            "Wrote a read-only check script for each episode, so a server can be audited without changing it."
+          ],
+          "tech": ["RHEL", "Rocky Linux", "AlmaLinux", "SSH", "firewalld", "CIS Benchmark", "Bash"],
+          "outcomes": ["Free and public, with a video for every episode."],
+          "links": [
+            { "label": "Course page", "url": "/hardening/" },
+            { "label": "Repository", "url": "https://github.com/harunaadoga/linux-server-hardening" }
+          ]
+        },
+        {
+          "title": "RHCSA EX200 exam labs",
+          "context": "Open source · labs and video playlist",
+          "featured": true,
+          "overview": "Hands-on practice labs for the Red Hat Certified System Administrator exam, with tasks, solutions and video walkthroughs, covering RHEL 9 and 10.",
+          "problem": "EX200 is a practical exam, and candidates without paid training have few realistic tasks to practise against.",
+          "contribution": [
+            "Designed the lab tasks against the published exam objectives.",
+            "Wrote the solutions and recorded the walkthroughs."
+          ],
+          "tech": ["RHEL", "Rocky Linux", "AlmaLinux", "Bash", "LVM", "SELinux", "systemd"],
+          "outcomes": ["Free and public; the most starred repository on my GitHub profile."],
+          "links": [
+            { "label": "Course page", "url": "/rhcsa/" },
+            { "label": "Repository", "url": "https://github.com/harunaadoga/rhcsa-ex200-exam-labs" }
+          ]
+        },
+        {
+          "title": "University Linux server estate",
+          "context": "Federal University of Lafia · 2012 – 2020",
+          "overview": "Management of the university's Linux server fleet using infrastructure as code, alongside a lecturing post.",
+          "problem": "",
+          "contribution": ["Managed the server fleet with infrastructure as code."],
+          "tech": ["Linux", "Infrastructure as code"],
+          "outcomes": [],
+          "links": [],
+          "todo": ["What the estate ran and what changed under your management"]
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud and Virtualisation",
+      "projects": [
+        {
+          "title": "OpenStack private cloud with Kayobe",
+          "context": "University of Sussex · 2023 – present",
+          "featured": true,
+          "overview": "A production OpenStack private cloud for research computing, deployed with Kayobe.",
+          "problem": "",
+          "contribution": [
+            "Helped design and build the cloud.",
+            "Worked on its three-tier network architecture and its power infrastructure."
+          ],
+          "tech": ["OpenStack", "Kayobe", "KVM", "Ceph", "Ansible"],
+          "outcomes": ["The cloud is in production."],
+          "links": [],
+          "diagram": true,
+          "todo": ["The need the cloud meets alongside the HPC cluster", "Public-safe network diagram"]
+        },
+        {
+          "title": "Cloud infrastructure for consulting clients",
+          "context": "Independent consultant · 2010 – 2020",
+          "overview": "Cloud infrastructure across AWS and on-premises environments for public-sector and private clients, with advice on cloud migration.",
+          "problem": "",
+          "contribution": ["Designed and deployed the infrastructure with Terraform and Ansible.", "Advised clients on migration."],
+          "tech": ["AWS", "Terraform", "Ansible"],
+          "outcomes": [],
+          "links": [],
+          "todo": ["One or two anonymised examples"]
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "title": "High-Performance Networking",
+      "projects": [
+        {
+          "title": "200G Ethernet fabric for research clusters",
+          "context": "University of Sussex · 2023 – present",
+          "overview": "Specification of the high-speed switching fabric for research computing, including the fabric adopted by the Artemis cluster.",
+          "problem": "HPC and AI workloads move large volumes of data between compute and storage, so the fabric sets the ceiling for the whole cluster.",
+          "contribution": ["Specified the switching fabric.", "Works across RoCE, BGP and IPv6 on the research network."],
+          "tech": ["200G Ethernet", "RoCE", "BGP", "IPv6", "Cumulus Linux", "OmniPath"],
+          "outcomes": [],
+          "links": [],
+          "diagram": true,
+          "todo": ["Public-safe topology diagram", "Design rationale you can share"]
+        },
+        {
+          "title": "Multi-site LAN/WAN for government offices",
+          "context": "Independent consultant · 2010 – 2020",
+          "overview": "Multi-site LAN/WAN and internet connectivity for government offices, built on Cisco routing and switching.",
+          "problem": "",
+          "contribution": ["Designed and delivered the networks."],
+          "tech": ["Cisco IOS", "Routing and switching", "LAN/WAN"],
+          "outcomes": [],
+          "links": [],
+          "todo": ["Number of sites or other details you can share"]
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "title": "Infrastructure Automation",
+      "projects": [
+        {
+          "title": "Automation for research computing services",
+          "context": "University of Sussex · 2023 – present",
+          "overview": "Research computing services automated with Ansible and Terraform and delivered through Git-based CI/CD.",
+          "problem": "Hand-built services are hard to reproduce and hard to hand over. Automation makes them repeatable and reviewable.",
+          "contribution": ["Automates services with Ansible, Terraform and Git-based CI/CD."],
+          "tech": ["Ansible", "Terraform", "GitHub Actions", "NetBox", "Prometheus", "Grafana"],
+          "outcomes": [],
+          "links": [],
+          "todo": ["A concrete example you can describe without internal detail"]
+        },
+        {
+          "title": "Public automation labs",
+          "context": "Open source",
+          "overview": "Public repositories for practising infrastructure automation: an Ansible lab and an infrastructure-as-code lab for HPC.",
+          "problem": "",
+          "contribution": ["Author and maintainer."],
+          "tech": ["Ansible", "Terraform (HCL)"],
+          "outcomes": [],
+          "links": [
+            { "label": "ansible_lab", "url": "https://github.com/harunaadoga/ansible_lab" },
+            { "label": "research-platform-lab", "url": "https://github.com/harunaadoga/research-platform-lab" }
+          ],
+          "todo": ["A sentence on what each lab builds"]
+        }
+      ]
+    },
+    {
+      "id": "sdn-nfv",
+      "title": "SDN and NFV Research",
+      "projects": [
+        {
+          "title": "Latency-aware placement of network functions at the edge",
+          "context": "PhD research · University of Glasgow · 2020 – 2024",
+          "featured": true,
+          "overview": "Doctoral research on running chains of virtual network functions across very different hosts at the network edge: virtual machines, containers, programmable switches and SmartNICs.",
+          "problem": "Network functions now run on mixed hardware. Placing a chain of them across that mix so that end-to-end latency stays low is a hard optimisation problem.",
+          "contribution": [
+            "A taxonomy of heterogeneous frameworks for deploying virtual network functions.",
+            "Testbed measurements of what heterogeneous execution gains.",
+            "An integer linear programming model for hybrid placement that minimises end-to-end latency.",
+            "HYPHA, a heuristic that finds near-optimal hybrid placements quickly.",
+            "A dynamic placement scheduler based on optimal stopping theory."
+          ],
+          "tech": ["NFV", "Service function chaining", "P4", "SmartNICs", "Integer linear programming", "Optimal stopping"],
+          "outcomes": ["PhD awarded in 2024.", "Three peer-reviewed publications: IEEE GLOBECOM 2023, IEEE NetSoft 2022 and Future Internet 2022."],
+          "links": [
+            { "label": "Thesis", "url": "https://doi.org/10.5525/gla.thesis.84344" },
+            { "label": "Publications", "url": "/research/#publications" },
+            { "label": "kernel-based-vnf-firewall", "url": "https://github.com/harunaadoga/kernel-based-vnf-firewall" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-gpu",
+      "title": "AI and GPU Infrastructure",
+      "projects": [
+        {
+          "title": "GPU compute for AI workloads",
+          "context": "University of Sussex · 2023 – present",
+          "overview": "GPU compute for AI workloads as part of the university's research computing platform, including the procurement behind it.",
+          "problem": "",
+          "contribution": ["Leads vendor negotiations for AI and HPC procurement.", "Runs Slurm scheduling for the multi-user environment the GPUs sit in."],
+          "tech": ["GPU compute", "Slurm", "Apptainer", "High-speed Ethernet"],
+          "outcomes": [],
+          "links": [],
+          "todo": ["Which AI workloads the platform supports", "Any hardware detail cleared for publication"]
+        }
+      ]
+    }
+  ]
+}

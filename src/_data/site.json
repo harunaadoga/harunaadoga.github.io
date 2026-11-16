@@ -1,19 +1,20 @@
 {
-  "name": "Dr Haruna Adoga",
+  "name": "Haruna Umar Adoga, PhD",
   "shortName": "Haruna Adoga",
   "url": "https://harunaadoga.github.io",
-  "tagline": "Research Platforms and AI Infrastructure",
-  "description": "Dr Haruna Adoga works on research platforms and AI infrastructure. PhD in Computing Science, University of Glasgow. Writing on HPC, Linux, networking, research and careers in infrastructure.",
+  "tagline": "HPC Infrastructure Engineer",
+  "description": "Haruna Umar Adoga, PhD is an HPC infrastructure engineer and computing scientist working across research computing, Linux systems engineering, OpenStack private cloud and high-performance networking. PhD in Computing Science, University of Glasgow.",
   "email": "haruna.umar.adoga@gmail.com",
   "location": "United Kingdom",
   "language": "en-GB",
   "social": {
-    "linkedin": "https://www.linkedin.com/in/haruna-adoga-72865517/",
+    "linkedin": "https://www.linkedin.com/in/haruna-umar-adoga-72865517/",
     "youtube": "https://www.youtube.com/@harunaadoga",
     "github": "https://github.com/harunaadoga",
     "x": "https://x.com/harunaadoga",
     "tiktok": "https://www.tiktok.com/@haruna_adoga",
-    "medium": "https://haruna-umar-adoga.medium.com/"
+    "medium": "https://haruna-umar-adoga.medium.com/",
+    "scholar": "https://scholar.google.com/citations?user=CMYVj5UAAAAJ"
   },
   "feeds": {
     "youtubeChannelId": "UCcs7cT_KebJheiFRq420g8g",
@@ -26,21 +27,69 @@
       "url": "/about/"
     },
     {
+      "label": "Experience",
+      "url": "/experience/"
+    },
+    {
+      "label": "Portfolio",
+      "url": "/portfolio/"
+    },
+    {
       "label": "Research",
       "url": "/research/"
     },
     {
-      "label": "Writing",
-      "url": "/writing/"
-    },
-    {
-      "label": "Free courses",
+      "label": "Teaching",
       "url": "/learn/",
-      "feature": true,
       "also": [
         "/rhcsa/",
         "/hardening/"
       ]
+    },
+    {
+      "label": "Services",
+      "url": "/services/"
+    },
+    {
+      "label": "Blog",
+      "url": "/writing/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "fullName": "Haruna Umar Adoga",
+  "roleLine": [
+    "HPC Infrastructure Engineer",
+    "Research Computing",
+    "Linux",
+    "Cloud & Networking"
+  ],
+  "keywords": [
+    "Haruna Adoga",
+    "Haruna Umar Adoga",
+    "HPC engineer",
+    "HPC infrastructure",
+    "research computing engineer",
+    "research computing infrastructure",
+    "Linux systems engineer",
+    "OpenStack engineer",
+    "high-performance networking",
+    "Slurm",
+    "Ceph",
+    "Lustre"
+  ],
+  "showPlaceholders": true,
+  "cvFile": "/Haruna-Umar-Adoga-CV.pdf",
+  "footerNav": [
+    {
+      "label": "Certifications and education",
+      "url": "/credentials/"
+    },
+    {
+      "label": "CV",
+      "url": "/cv/"
     },
     {
       "label": "Media",
@@ -51,8 +100,8 @@
       "url": "/engage/"
     },
     {
-      "label": "Contact",
-      "url": "/contact/"
+      "label": "Privacy",
+      "url": "/privacy/"
     }
   ]
 }

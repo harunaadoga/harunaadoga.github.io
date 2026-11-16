@@ -1,0 +1,88 @@
+---
+layout: layouts/base.njk
+title: Engineering Portfolio
+description: Engineering portfolio of Haruna Umar Adoga, PhD. HPC infrastructure, research computing, Linux systems engineering, OpenStack private cloud, high-performance networking, automation, SDN and NFV research, and GPU infrastructure for AI.
+permalink: /portfolio/
+---
+{% from "partials/icons.njk" import icon %}
+{% from "partials/cards.njk" import cta %}
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Engineering portfolio</p>
+    <h1>Selected work, by area.</h1>
+    <p class="lede">Projects from production infrastructure, open-source teaching and doctoral research. Employer projects are described at a level that is already public; internal configuration is deliberately left out.</p>
+    <nav class="cat-nav" aria-label="Portfolio categories">
+      {%- for c in portfolio.categories %}
+      <a href="#{{ c.id }}"><span>0{{ loop.index }}</span>{{ c.title }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+</section>
+
+{%- for c in portfolio.categories %}
+<section class="section section--line pcat" id="{{ c.id }}">
+  <div class="wrap">
+    <div class="pcat__head reveal">
+      <p class="eyebrow">0{{ loop.index }}</p>
+      <h2>{{ c.title }}</h2>
+    </div>
+    {%- for p in c.projects %}
+    <article class="proj reveal">
+      <header class="proj__head">
+        <h3>{{ p.title }}</h3>
+        <p class="proj__context">{{ p.context }}</p>
+      </header>
+      <div class="proj__body">
+        <p class="proj__overview">{{ p.overview }}</p>
+        <dl class="proj__facts">
+          {%- if p.problem %}
+          <dt>Problem</dt><dd>{{ p.problem }}</dd>
+          {%- endif %}
+          <dt>My contribution</dt>
+          <dd><ul>{% for x in p.contribution %}<li>{{ x }}</li>{% endfor %}</ul></dd>
+          {%- if p.outcomes.length %}
+          <dt>Outcomes</dt>
+          <dd><ul>{% for x in p.outcomes %}<li>{{ x }}</li>{% endfor %}</ul></dd>
+          {%- endif %}
+          <dt>Technologies</dt>
+          <dd><ul class="chips">{% for t in p.tech %}<li class="chip">{{ t }}</li>{% endfor %}</ul></dd>
+          {%- if p.links.length %}
+          <dt>Links</dt>
+          <dd class="proj__links">{% for l in p.links %}<a class="link-arrow" href="{{ l.url }}"{% if l.url.startsWith('http') %} target="_blank" rel="noopener"{% endif %}>{{ l.label }} {{ icon("ext" if l.url.startsWith('http') else "arrow") }}</a>{% endfor %}</dd>
+          {%- endif %}
+        </dl>
+        {%- if site.showPlaceholders and p.todo %}
+        <div class="placeholder" role="note">
+          <strong>To complete before publishing</strong>
+          <ul>{% for t in p.todo %}<li>{{ t }}</li>{% endfor %}</ul>
+        </div>
+        {%- endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+{%- endfor %}
+
+{%- if github.length %}
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <div><p class="eyebrow">Open source</p><h2>Public repositories</h2></div>
+      <a class="link-arrow" href="{{ site.social.github }}" target="_blank" rel="noopener">GitHub profile {{ icon("ext") }}</a>
+    </div>
+    <ul class="repo-list reveal">
+      {%- for repo in github %}
+      <li>
+        <a href="{{ repo.url }}" target="_blank" rel="noopener">{{ repo.name }}</a>
+        <span>{{ repo.description }}</span>
+        {%- if repo.language %}<em>{{ repo.language }}</em>{% endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+{{ cta(site, "Want the detail behind a project?", "I am happy to talk through design decisions, trade-offs and lessons learned.") }}
