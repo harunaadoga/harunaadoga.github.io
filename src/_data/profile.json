@@ -68,16 +68,16 @@
   "experience": [
     {
       "role": "HPC Systems Engineer",
-      "org": "University of Sussex",
+      "org": "UK higher education",
       "place": "United Kingdom",
       "period": "2023 – present",
-      "summary": "Technical lead for the university's HPC infrastructure: technical strategy, the full infrastructure stack, procurement, and external representation with technology partners and vendors.",
+      "summary": "Technical lead for university HPC infrastructure: technical strategy, the full infrastructure stack, procurement, and external representation with technology partners and vendors.",
       "points": [
-        "Core technical contributor to the end-to-end delivery of the Artemis Hybrid Research Cluster, from requirements and procurement through physical installation to production, including specifying the switching fabric the cluster adopted.",
+        "Core technical contributor to the end-to-end delivery of a university hybrid research cluster, from requirements and procurement through physical installation to production, including specifying the switching fabric the cluster adopted.",
         "Helped design and build a production OpenStack private cloud with Kayobe, including its three-tier network architecture and power infrastructure.",
         "Senior infrastructure authority and primary datacentre engineer for research computing: roadmap, capacity planning, rack design, power modelling and hardware lifecycle.",
         "Runs Slurm scheduling for multi-user research environments, with Ceph and Lustre storage behind it, and automates services with Ansible, Terraform and Git-based CI/CD.",
-        "GridPP site security contact and Registration Authority operator; represents Sussex in GridPP operations and UK research network engineering forums.",
+        "GridPP site security contact and Registration Authority operator; represents the site in GridPP operations and UK research network engineering forums.",
         "Leads vendor negotiations for AI and HPC procurement, provides cover for senior management, and supports and mentors colleagues and researchers new to HPC."
       ]
     },
@@ -138,8 +138,8 @@
   ],
   "recognition": [
     {
-      "title": "Sussex Awards 2025, shortlisted",
-      "body": "Institutional Improvement and Transformation category: team nomination for the delivery of the Artemis Hybrid Research Cluster."
+      "title": "Institutional staff award 2025, shortlisted",
+      "body": "Institutional Improvement and Transformation category: team nomination for the delivery of a university hybrid research cluster."
     }
   ],
   "certifications": [

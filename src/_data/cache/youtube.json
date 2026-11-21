@@ -1,5 +1,13 @@
 [
   {
+    "id": "1kF3gPnmUpA",
+    "title": "Is Linux Actually Worth Learning?",
+    "published": "2026-11-18T16:05:28+00:00",
+    "description": "Is Linux a good career choice? And is it worth investing your time in learning it? In this short I break down why Linux opens doors into system administration, cloud, DevOps, cybersecurity, HPC and more.",
+    "url": "https://www.youtube.com/watch?v=1kF3gPnmUpA",
+    "thumb": "https://i.ytimg.com/vi/1kF3gPnmUpA/hqdefault.jpg"
+  },
+  {
     "id": "hZBzFdYaN_s",
     "title": "Do You Need Linux+ Before RHCSA? My Honest Experience",
     "published": "2026-11-08T12:06:41+00:00",
@@ -110,13 +118,5 @@
     "description": "This is a 10-part Linux server hardening series where I take a default Rocky Linux install and turn it into something that passes a CIS Benchmark security audit.",
     "url": "https://www.youtube.com/watch?v=AtoDv4OrD4U",
     "thumb": "https://i.ytimg.com/vi/AtoDv4OrD4U/hqdefault.jpg"
-  },
-  {
-    "id": "5ZmY3dv2x7s",
-    "title": "Practical IT Skills That Get You Certified & Hired | Channel Trailer",
-    "published": "2026-10-06T13:42:23+00:00",
-    "description": "Welcome to the channel.",
-    "url": "https://www.youtube.com/watch?v=5ZmY3dv2x7s",
-    "thumb": "https://i.ytimg.com/vi/5ZmY3dv2x7s/hqdefault.jpg"
   }
 ]
