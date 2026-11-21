@@ -16,8 +16,8 @@ This branch repositions the site around "HPC Infrastructure Engineer" and adds t
 1. **Portfolio placeholders.** Dashed "To complete before publishing" boxes mark details only you can supply (the need each employer project met, public-safe diagrams, figures cleared for publication). Fill them in `src/_data/portfolio.json`, or set `showPlaceholders` to `false` in `src/_data/site.json` to hide them.
 2. **Certification dates.** Only RHCSA (2025) has a date. AWS Cloud Practitioner, CCNA and ITIL v3 show "Date and status to confirm". AWS and Cisco certifications expire after three years, so please supply the year earned and whether each is current.
 3. **MSc title.** The brief says "MSc Computer Science"; the CV says "MSc, Computing Science (Distinction)", University of Hertfordshire. The site follows the CV.
-4. **Employer named again.** The About page and experience pages name the University of Sussex as current employer, which a professional experience section needs. The header and role line stay employer-neutral.
-5. **Services and your employment.** `/services/` offers independent consulting and training. Check this against your contract's outside-work terms before it goes live.
+4. **Current employer unnamed.** The current role is listed as "UK higher education", the award as an institutional staff award and the cluster as a university hybrid research cluster, so no page names the employer.
+5. **Services wording.** `/services/` lists the areas you can help with. It makes no claim that you currently take on outside work.
 6. **Google Scholar is back.** It was removed earlier at your request; the brief asks for it, so it is linked from Research, Contact and the social icons. ORCID stays removed.
 7. **Public CV.** The PDF is generated from the site and leaves out phone and address. If you would rather offer your own PDF, replace `src/static/Haruna-Umar-Adoga-CV.pdf`.
 8. **Architecture diagrams.** None are published, because no public-safe diagrams exist yet.

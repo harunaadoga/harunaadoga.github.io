@@ -5,8 +5,8 @@
       "title": "HPC Infrastructure",
       "projects": [
         {
-          "title": "Artemis Hybrid Research Cluster",
-          "context": "University of Sussex · 2023 – present",
+          "title": "Hybrid research cluster delivery",
+          "context": "UK higher education · 2023 – present",
           "featured": true,
           "overview": "A hybrid research cluster for the university, delivered end to end: requirements, procurement, physical installation and the move into production.",
           "problem": "",
@@ -18,7 +18,7 @@
           "tech": ["Slurm", "Lustre", "Ceph", "GPU compute", "200G Ethernet", "RoCE"],
           "outcomes": [
             "The cluster is in production and serves multi-user research workloads.",
-            "The delivery team was shortlisted in the Sussex Awards 2025, Institutional Improvement and Transformation category."
+            "The delivery team was shortlisted for an institutional staff award in 2025, Institutional Improvement and Transformation category."
           ],
           "links": [],
           "diagram": true,
@@ -32,7 +32,7 @@
       "projects": [
         {
           "title": "GridPP site operations",
-          "context": "University of Sussex · 2023 – present",
+          "context": "UK higher education · 2023 – present",
           "overview": "Running the university's site in GridPP, the UK computing grid for particle physics, and representing the site in GridPP operations.",
           "problem": "Grid sites share compute with a national and international collaboration, so they have to meet common standards for security, identity and availability.",
           "contribution": [
@@ -118,7 +118,7 @@
       "projects": [
         {
           "title": "OpenStack private cloud with Kayobe",
-          "context": "University of Sussex · 2023 – present",
+          "context": "UK higher education · 2023 – present",
           "featured": true,
           "overview": "A production OpenStack private cloud for research computing, deployed with Kayobe.",
           "problem": "",
@@ -151,8 +151,8 @@
       "projects": [
         {
           "title": "200G Ethernet fabric for research clusters",
-          "context": "University of Sussex · 2023 – present",
-          "overview": "Specification of the high-speed switching fabric for research computing, including the fabric adopted by the Artemis cluster.",
+          "context": "UK higher education · 2023 – present",
+          "overview": "Specification of the high-speed switching fabric for research computing, including the fabric adopted by the hybrid research cluster.",
           "problem": "HPC and AI workloads move large volumes of data between compute and storage, so the fabric sets the ceiling for the whole cluster.",
           "contribution": ["Specified the switching fabric.", "Works across RoCE, BGP and IPv6 on the research network."],
           "tech": ["200G Ethernet", "RoCE", "BGP", "IPv6", "Cumulus Linux", "OmniPath"],
@@ -180,7 +180,7 @@
       "projects": [
         {
           "title": "Automation for research computing services",
-          "context": "University of Sussex · 2023 – present",
+          "context": "UK higher education · 2023 – present",
           "overview": "Research computing services automated with Ansible and Terraform and delivered through Git-based CI/CD.",
           "problem": "Hand-built services are hard to reproduce and hard to hand over. Automation makes them repeatable and reviewable.",
           "contribution": ["Automates services with Ansible, Terraform and Git-based CI/CD."],
@@ -238,7 +238,7 @@
       "projects": [
         {
           "title": "GPU compute for AI workloads",
-          "context": "University of Sussex · 2023 – present",
+          "context": "UK higher education · 2023 – present",
           "overview": "GPU compute for AI workloads as part of the university's research computing platform, including the procurement behind it.",
           "problem": "",
           "contribution": ["Leads vendor negotiations for AI and HPC procurement.", "Runs Slurm scheduling for the multi-user environment the GPUs sit in."],
