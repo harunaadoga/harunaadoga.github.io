@@ -53,7 +53,7 @@ permalink: /hardening/
         <ul class="chips">
           <li><a class="chip" href="{{ base }}/{{ e.slug }}/README.md" target="_blank" rel="noopener">Steps</a></li>
           <li><a class="chip" href="{{ base }}/{{ e.slug }}/check.sh" target="_blank" rel="noopener">Check script</a></li>
-          <li><a class="chip" href="https://www.youtube.com/watch?v={{ e.video }}" target="_blank" rel="noopener">▶ Video</a></li>
+          {%- if e.video %}<li><a class="chip" href="https://www.youtube.com/watch?v={{ e.video }}" target="_blank" rel="noopener">▶ Video</a></li>{% endif %}
         </ul>
       </li>
       {%- endfor %}

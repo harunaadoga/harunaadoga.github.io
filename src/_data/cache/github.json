@@ -1,5 +1,13 @@
 [
   {
+    "name": "linux-server-hardening",
+    "url": "https://github.com/harunaadoga/linux-server-hardening",
+    "description": "Linux server hardening step by step, following the CIS Benchmark: attack surface, user accounts, SSH, firewalld and more. A video and a read-only check script for every episode. Written for RHEL, Rocky Linux and AlmaLinux 9 and 10.",
+    "language": "Shell",
+    "stars": 0,
+    "pushed": "2026-11-25T20:31:12Z"
+  },
+  {
     "name": "ansible_lab",
     "url": "https://github.com/harunaadoga/ansible_lab",
     "description": "Ansible Automation",
@@ -8,19 +16,11 @@
     "pushed": "2026-11-14T22:29:34Z"
   },
   {
-    "name": "linux-server-hardening",
-    "url": "https://github.com/harunaadoga/linux-server-hardening",
-    "description": "Linux server hardening step by step, following the CIS Benchmark: attack surface, user accounts, SSH, firewalld and more. A video and a read-only check script for every episode. Written for RHEL, Rocky Linux and AlmaLinux 9 and 10.",
-    "language": "Shell",
-    "stars": 0,
-    "pushed": "2026-11-07T22:36:09Z"
-  },
-  {
     "name": "rhcsa-ex200-exam-labs",
     "url": "https://github.com/harunaadoga/rhcsa-ex200-exam-labs",
     "description": "Free RHCSA EX200 hands-on labs for RHEL, Rocky Linux and AlmaLinux 9/10: practice tasks, solutions and a full mock exam, organised by the official exam objectives, with a video walkthrough for every lab.",
     "language": "Shell",
-    "stars": 44,
+    "stars": 48,
     "pushed": "2026-11-04T22:40:11Z"
   },
   {
