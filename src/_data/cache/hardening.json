@@ -1,0 +1,32 @@
+[
+  {
+    "n": "01",
+    "title": "Reducing the Attack Surface",
+    "slug": "01-attack-surface",
+    "video": "xQHweeFyLtQ"
+  },
+  {
+    "n": "02",
+    "title": "Locking Down User Accounts",
+    "slug": "02-user-accounts",
+    "video": "fbEMHl9VFSw"
+  },
+  {
+    "n": "03",
+    "title": "Hardening SSH",
+    "slug": "03-ssh",
+    "video": "xPjogpvOukA"
+  },
+  {
+    "n": "04",
+    "title": "Firewall with firewalld",
+    "slug": "04-firewall",
+    "video": "e-GcC3mW6gs"
+  },
+  {
+    "n": "05",
+    "title": "Filesystem Security",
+    "slug": "05-filesystem",
+    "video": "Ey51y6zvFD0"
+  }
+]

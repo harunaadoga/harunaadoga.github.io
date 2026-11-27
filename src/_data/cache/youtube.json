@@ -1,5 +1,29 @@
 [
   {
+    "id": "Ey51y6zvFD0",
+    "title": "Linux Server Hardening Series - Ep 5: Filesystem Security (noexec, SUID, chattr)",
+    "published": "2026-11-26T09:59:21+00:00",
+    "description": "Can an attacker run programs from /tmp on your Linux server?",
+    "url": "https://www.youtube.com/watch?v=Ey51y6zvFD0",
+    "thumb": "https://i.ytimg.com/vi/Ey51y6zvFD0/hqdefault.jpg"
+  },
+  {
+    "id": "6gXiJfPuivc",
+    "title": "Your Linux Server Is Being Attacked Right Now",
+    "published": "2026-11-25T12:00:38+00:00",
+    "description": "The moment a Linux server goes online, bots start hammering SSH on port 22. Here's why, and the four things you should do about it.",
+    "url": "https://www.youtube.com/watch?v=6gXiJfPuivc",
+    "thumb": "https://i.ytimg.com/vi/6gXiJfPuivc/hqdefault.jpg"
+  },
+  {
+    "id": "0ZYJFrA90FU",
+    "title": "Failed the RHCSA EX200? Do This Before Your Retake",
+    "published": "2026-11-23T12:00:20+00:00",
+    "description": "Failed the RHCSA EX200? Here's exactly what to do next. How to read your score report, the mistakes that fail most people, how to practise like the real exam, and an exam day plan so your retake is the one you pass.",
+    "url": "https://www.youtube.com/watch?v=0ZYJFrA90FU",
+    "thumb": "https://i.ytimg.com/vi/0ZYJFrA90FU/hqdefault.jpg"
+  },
+  {
     "id": "1kF3gPnmUpA",
     "title": "Is Linux Actually Worth Learning?",
     "published": "2026-11-18T16:05:28+00:00",
@@ -94,29 +118,5 @@
     "description": "You've been watching Linux tutorials for months and you still don't feel ready. That's not because the content is bad. It's because random videos teach random things in a random order and nothing connects.",
     "url": "https://www.youtube.com/watch?v=S3mupfUhPK0",
     "thumb": "https://i.ytimg.com/vi/S3mupfUhPK0/hqdefault.jpg"
-  },
-  {
-    "id": "xQHweeFyLtQ",
-    "title": "Linux Server Hardening - Ep 1: Reducing the Attack Surface (CIS Benchmark)",
-    "published": "2026-10-12T17:42:48+00:00",
-    "description": "Linux Server Hardening Series - Episode 1 of 10",
-    "url": "https://www.youtube.com/watch?v=xQHweeFyLtQ",
-    "thumb": "https://i.ytimg.com/vi/xQHweeFyLtQ/hqdefault.jpg"
-  },
-  {
-    "id": "FsKKte-uLjg",
-    "title": "If I Had to Learn Linux Again, This Is the Exact Order I’d Follow",
-    "published": "2026-10-11T09:13:09+00:00",
-    "description": "Most people learn Linux in the wrong order and wonder why it feels so hard. This is the exact sequence I'd follow if I was starting from zero today, based on how the skills actually build on each other.",
-    "url": "https://www.youtube.com/watch?v=FsKKte-uLjg",
-    "thumb": "https://i.ytimg.com/vi/FsKKte-uLjg/hqdefault.jpg"
-  },
-  {
-    "id": "AtoDv4OrD4U",
-    "title": "Linux Server Hardening Series - Intro",
-    "published": "2026-10-10T09:01:53+00:00",
-    "description": "This is a 10-part Linux server hardening series where I take a default Rocky Linux install and turn it into something that passes a CIS Benchmark security audit.",
-    "url": "https://www.youtube.com/watch?v=AtoDv4OrD4U",
-    "thumb": "https://i.ytimg.com/vi/AtoDv4OrD4U/hqdefault.jpg"
   }
 ]

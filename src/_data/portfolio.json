@@ -18,7 +18,7 @@
           "tech": ["Slurm", "Lustre", "Ceph", "GPU compute", "200G Ethernet", "RoCE"],
           "outcomes": [
             "The cluster is in production and serves multi-user research workloads.",
-            "The delivery team was shortlisted for an institutional staff award in 2025, Institutional Improvement and Transformation category."
+            "The delivery team was shortlisted for a UK higher education staff award in 2025, Institutional Improvement and Transformation category."
           ],
           "links": [],
           "diagram": true,

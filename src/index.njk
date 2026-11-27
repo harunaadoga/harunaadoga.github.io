@@ -37,7 +37,7 @@ permalink: /
   <div class="stats">
     {%- for s in profile.stats %}
     <div class="stat reveal" style="--d: {{ loop.index0 * 80 }}ms">
-      <div class="stat__value"><span data-count="{{ s.value }}">{{ s.value }}</span>{{ s.suffix }}</div>
+      <div class="stat__value">{% if s.value is number %}<span data-count="{{ s.value }}">{{ s.value }}</span>{% else %}{{ s.value }}{% endif %}{{ s.suffix }}</div>
       <p class="stat__label">{{ s.label }}</p>
     </div>
     {%- endfor %}

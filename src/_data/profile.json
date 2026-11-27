@@ -16,9 +16,9 @@
       "label": "years teaching systems and networking"
     },
     {
-      "value": 200,
-      "suffix": "G",
-      "label": "Ethernet fabrics specified for research clusters"
+      "value": "Full stack",
+      "suffix": "",
+      "label": "research computing ownership: datacentre, network, storage and scheduler"
     }
   ],
   "focus": [
@@ -172,7 +172,7 @@
   ],
   "recognition": [
     {
-      "title": "Institutional staff award 2025, shortlisted",
+      "title": "UK higher education staff award 2025, shortlisted",
       "body": "Institutional Improvement and Transformation category: team nomination for the delivery of a university hybrid research cluster."
     }
   ],

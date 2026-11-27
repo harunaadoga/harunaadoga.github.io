@@ -39,7 +39,7 @@ Then open http://localhost:8080. Drafts are visible locally and hidden on the li
 | Experience, education, certifications, skills, publications | `src/_data/profile.json` |
 | Engineering portfolio (eight categories, projects) | `src/_data/portfolio.json` |
 | Professional services | `src/_data/services.json` |
-| Free courses | `src/_data/rhcsa.json`, `src/_data/hardening.json` |
+| Free courses | `src/_data/rhcsa.json`; hardening episodes are read from the linux-server-hardening README (`src/_data/hardening.js`) |
 | Hand-picked posts from LinkedIn, X, TikTok | `src/_data/highlights.json` |
 | Pages | `src/*.njk` |
 | Blog posts | `src/posts/*.md` |
